@@ -7,21 +7,32 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
-	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
+
 	<link rel="stylesheet" href="css/dark.css" type="text/css" />
 	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
+	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/components/ion.rangeslider.css" type="text/css" />
+
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	<link rel="stylesheet" href="css/colors.php?color=e83c3c" type="text/css" />
+
+	<!-- Hosting Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/bike/css/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="demos/bike/bike.css" type="text/css" />
+	<!-- / -->
+
 	<!-- Document Title
 	============================================= -->
-	<title>Canvas | The Multi-Purpose HTML5 Template</title>
+	<title>Bike Rent Demo | Canvas</title>
 
 </head>
 
@@ -31,1482 +42,78 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
+		<!-- Modal -->
+		<div class="modal1 mfp-hide" id="modal-register">
+			<div class="card mx-auto" style="max-width: 540px;">
+				<div class="card-header py-3 bg-transparent center">
+					<h3 class="mb-0 fw-normal">Hello, Welcome Back</h3>
+				</div>
+				<div class="card-body mx-auto py-5" style="max-width: 70%;">
+
+					<a href="#" class="button button-large button-rounded w-100 si-colored si-facebook nott fw-normal ls0 center m-0"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
+
+					<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
+
+					<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
+
+						<div class="col-12">
+							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username" />
+						</div>
+
+						<div class="col-12 mt-4">
+							<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password" />
+						</div>
+
+						<div class="col-12">
+							<a href="#" class="float-end text-dark fw-light mt-2">Forgot Password?</a>
+						</div>
+
+						<div class="col-12 mt-4">
+							<button class="button button-rounded w-100 m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer py-4 center">
+					<p class="mb-0">Don't have an account? <a href="#"><u>Sign up</u></a></p>
+				</div>
+			</div>
+		</div>
+
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header transparent-header" data-sticky-class="not-dark">
+		<header id="header" class="border-bottom header-size-custom" data-sticky-shrink="false">
 			<div id="header-wrap">
 				<div class="container">
-					<div class="header-row">
+					<div class="header-row justify-content-lg-between">
 
 						<!-- Logo
 						============================================= -->
-						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-							<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						<div id="logo" class="me-lg-0">
+							<a href="index.html" class="standard-logo" data-dark-logo="demos/business/images/logo-dark.png"><img src="demos/business/images/logo.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="demos/business/images/logo-dark@2x.png"><img src="demos/business/images/logo@2x.png" alt="Canvas Logo"></a>
 						</div><!-- #logo end -->
-
-						<div class="header-misc">
-
-							<!-- Top Search
-							============================================= -->
-							<div id="top-search" class="header-misc-icon">
-								<a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-							</div><!-- #top-search end -->
-
-							<!-- Top Cart
-							============================================= -->
-							<div id="top-cart" class="header-misc-icon d-none d-sm-block">
-								<a href="#" id="top-cart-trigger"><i class="icon-line-bag"></i><span class="top-cart-number">5</span></a>
-								<div class="top-cart-content">
-									<div class="top-cart-title">
-										<h4>Shopping Cart</h4>
-									</div>
-									<div class="top-cart-items">
-										<div class="top-cart-item">
-											<div class="top-cart-item-image">
-												<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
-											</div>
-											<div class="top-cart-item-desc">
-												<div class="top-cart-item-desc-title">
-													<a href="#">Blue Round-Neck Tshirt with a Button</a>
-													<span class="top-cart-item-price d-block">$19.99</span>
-												</div>
-												<div class="top-cart-item-quantity">x 2</div>
-											</div>
-										</div>
-										<div class="top-cart-item">
-											<div class="top-cart-item-image">
-												<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
-											</div>
-											<div class="top-cart-item-desc">
-												<div class="top-cart-item-desc-title">
-													<a href="#">Light Blue Denim Dress</a>
-													<span class="top-cart-item-price d-block">$24.99</span>
-												</div>
-												<div class="top-cart-item-quantity">x 3</div>
-											</div>
-										</div>
-									</div>
-									<div class="top-cart-action">
-										<span class="top-checkout-price">$114.95</span>
-										<a href="#" class="button button-3d button-small m-0">View Cart</a>
-									</div>
-								</div>
-							</div><!-- #top-cart end -->
-
-						</div>
 
 						<div id="primary-menu-trigger">
 							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
 						</div>
 
-						<!-- Primary Navigation
-						============================================= -->
 						<nav class="primary-menu">
 
-							<ul class="menu-container">
-								<li class="menu-item">
-									<a class="menu-link" href="index.html"><div>Home</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a class="menu-link" href="intro.html#section-niche"><div>Niche Demos</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="intro.html#section-onepage"><div>One-Page Demos</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-corporate.html"><div>Home - Corporate</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-corporate.html"><div>Corporate - Layout 1</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-corporate-2.html"><div>Corporate - Layout 2</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-corporate-3.html"><div>Corporate - Layout 3</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-corporate-4.html"><div>Corporate - Layout 4</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-portfolio.html"><div>Home - Portfolio</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-portfolio.html"><div>Portfolio - Layout 1</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-portfolio-2.html"><div>Portfolio - Layout 2</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-portfolio-3.html"><div>Portfolio - Masonry</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-portfolio-4.html"><div>Portfolio - AJAX</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-blog.html"><div>Home - Blog</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-blog.html"><div>Blog - Layout 1</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-blog-2.html"><div>Blog - Layout 2</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-blog-3.html"><div>Blog - Layout 3</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-shop.html"><div>Home - Shop</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-shop.html"><div>Shop - Layout 1</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-shop-2.html"><div>Shop - Layout 2</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-magazine.html"><div>Home - Magazine</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-magazine.html"><div>Magazine - Layout 1</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-magazine-2.html"><div>Magazine - Layout 2</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-magazine-3.html"><div>Magazine - Layout 3</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="landing.html"><div>Home - Landing Page</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="landing.html"><div>Landing Page - Layout 1</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="landing-2.html"><div>Landing Page - Layout 2</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="landing-3.html"><div>Landing Page - Layout 3</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="landing-4.html"><div>Landing Page - Layout 4</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="landing-5.html"><div>Landing Page - Layout 5</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-fullscreen-image.html"><div>Home - Full Screen</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-fullscreen-image.html"><div>Full Screen - Image</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-fullscreen-slider.html"><div>Full Screen - Slider</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-fullscreen-video.html"><div>Full Screen - Video</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="index-onepage.html"><div>Home - One Page</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="index-onepage.html"><div>One Page - Default</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-onepage-2.html"><div>One Page - Submenu</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="index-onepage-3.html"><div>One Page - Dots Style</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item mega-menu mega-menu-small">
-											<a class="menu-link" href="#"><div>Extras</div></a>
-											<div class="mega-menu-content">
-												<div class="row mx-0">
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="index-wedding.html"><div>Wedding</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="index-restaurant.html"><div>Restaurant</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="index-events.html"><div>Events</div></a>
-														</li>
-													</ul>
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="index-parallax.html"><div>Parallax</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="index-app-showcase.html"><div>App Showcase</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="index-boxed.html"><div>Boxed Layout</div></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item">
-									<a class="menu-link" href="#"><div>Features</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a class="menu-link" href="#"><div><i class="icon-stack"></i>Sliders</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="slider-revolution.html"><div>Revolution Slider</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="rs-demos.html"><div>Premium Templates</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-revolution.html"><div>Full Screen</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-revolution-fullwidth.html"><div>Full Width</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-revolution-kenburns.html"><div>Kenburns Effect</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-revolution-html5-videos.html"><div>HTML5 Video</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="slider-canvas.html"><div>Canvas Slider</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas.html"><div>Full Width</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-fade.html"><div>Fade Transition</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-autoplay.html"><div>Autoplay Feature</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-video-event.html"><div>Custom Video Event</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-pagination.html"><div>Pagination Navigation</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-3.html"><div>3 Columns</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-4.html"><div>4 Columns</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-canvas-5.html"><div>5 Columns</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="slider-flex.html"><div>Flex Slider</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="slider-flex.html"><div>Default Layout</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-flex-thumbs.html"><div>with Thumbs</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="slider-owl.html"><div>Owl Slider</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="slider-owl-full.html"><div>Full Width</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-owl.html"><div>Boxed Width</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="slider-owl-videos.html"><div>Video Slider</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="static-parallax.html"><div>Static Media</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="static-parallax.html"><div>Static - Parallax</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="static-image.html"><div>Static - Image</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="static-thumbs-grid.html"><div>Static - Thumb Gallery</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="static-html5-video.html"><div>Static - HTML5 Video</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="static-embed-video.html"><div>Static - Embedded Video</div></a>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="#"><div><i class="icon-umbrella"></i>Headers</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="header-light.html"><div>Light Version</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="header-dark.html"><div>Dark Version</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="header-transparent.html"><div>Transparent</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="header-semi-transparent.html"><div>Semi Transparent</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="header-semi-transparent.html"><div>Light Version</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="header-semi-transparent-dark.html"><div>Dark Version</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="header-side-left.html"><div>Left Side Header</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="header-side-left.html"><div>Fixed Position</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="header-side-left-open.html"><div>OnClick Open</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="header-side-left-open-push.html"><div>Push Content</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="header-side-right.html"><div>Right Side Header</div></a>
-													<ul class="sub-menu-container">
-														<li class="menu-item">
-															<a class="menu-link" href="header-side-right.html"><div>Fixed Position</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="header-side-right-open.html"><div>OnClick Open</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="header-side-right-open-push.html"><div>Push Content</div></a>
-														</li>
-													</ul>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="header-floating.html"><div>Floating Version</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="static-sticky.html"><div>Static Sticky</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="responsive-sticky.html"><div>Responsive Sticky</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="logo-changer.html"><div>Alternate Logos</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item mega-menu mega-menu-small">
-											<a class="menu-link" href="#"><div><i class="icon-align-justify2"></i>Menu Styles</div></a>
-											<div class="mega-menu-content">
-												<div class="row mx-0">
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="header-light.html"><div>Default Layout</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-2.html"><div>Alternate Layout</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-3.html"><div>Pill Style</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-4.html"><div>Border Style</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-5.html"><div>Large Icon Menu</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="split-menu.html"><div>Split Layout</div></a>
-														</li>
-													</ul>
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="menu-6.html"><div>Scaling Border</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-subtitle.html"><div>Sub-Title Menu</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-7.html"><div>Extended Menu 1</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-8.html"><div>Extended Menu 2</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-9.html"><div>Extended Menu 3</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="menu-10.html"><div>Overlay Menu</div></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="mega-menu.html"><div><i class="icon-line-columns"></i>Mega Menu</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="mega-menu.html"><div>Widgetized</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="mega-menu-full.html"><div>Full-Width</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="mega-menu-tab.html"><div>Tabbed</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="mega-menu-side-tab.html"><div>Side-Tabs (onClick)</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="forms.html"><div><i class="icon-wpforms"></i>Forms</div></a>
-										</li>
-										<li class="menu-item mega-menu mega-menu-small">
-											<a class="menu-link" href="widgets.html"><div><i class="icon-gift"></i>Widgets</div></a>
-											<div class="mega-menu-content">
-												<div class="row mx-0">
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Links</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Flickr Photostream</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Dribbble Shots</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Subscribers</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Posts List</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Twitter Feed</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Tabbed Widgets</div></a>
-														</li>
-													</ul>
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Carousel</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Social Icons</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Testimonials</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Quick Contact</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Tags Cloud</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Video Embeds</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="widgets.html"><div>Raw HTML</div></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class="menu-item mega-menu mega-menu-small">
-											<a class="menu-link" href="#"><div><i class="icon-ok-sign"></i>Page Titles</div></a>
-											<div class="mega-menu-content">
-												<div class="row mx-0">
-													<ul class="sub-menu-container mega-menu-column col-5">
-														<li class="menu-item">
-															<a class="menu-link" href="page.html"><div>Left Align</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-right.html"><div>Right Align</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-center.html"><div>Center Align</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-dark.html"><div>Dark Style</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-pattern.html"><div>BG Pattern</div></a>
-														</li>
-													</ul>
-													<ul class="sub-menu-container mega-menu-column col-7">
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-parallax.html"><div>Parallax - Default</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-parallax-header.html"><div>Parallax - Transparent</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-video.html"><div>HTML5 Video</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-nobg.html"><div>No Background</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="page-title-mini.html"><div>Mini Version</div></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="side-panel-left-overlay.html"><div>Left Overlay</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="side-panel-left-push.html"><div>Left Push</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="side-panel-right-overlay.html"><div>Right Overlay</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="side-panel.html"><div>Right Push</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="side-panel-light.html"><div>Light Background</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="modal-onload.html"><div><i class="icon-line-expand"></i>Modal OnLoad</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="modal-onload.html"><div>Default Layout</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="modal-onload-iframe.html"><div>Video iFrame</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="modal-onload-subscribe.html"><div>Subscription Form</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="modal-onload-common-height.html"><div>Common Height</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="modal-onload-cookie.html"><div>Cookies Enabled</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item mega-menu mega-menu-small">
-											<a class="menu-link" href="#footer" data-scrollto="#footer"><div><i class="icon-th"></i>Footers</div></a>
-											<div class="mega-menu-content">
-												<div class="row mx-0">
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="sticky-footer.html"><div>Sticky</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="#footer" data-scrollto="#footer"><div>Layout 1</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="footer-2.html#footer"><div>Layout 2</div></a>
-														</li>
-													</ul>
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="footer-3.html#footer"><div>Layout 3</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="footer-4.html#footer"><div>Layout 4</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="footer-5.html#footer"><div>Layout 5</div></a>
-														</li>
-													</ul>
-													<ul class="sub-menu-container mega-menu-column col">
-														<li class="menu-item">
-															<a class="menu-link" href="footer-6.html#footer"><div>Layout 6</div></a>
-														</li>
-														<li class="menu-item">
-															<a class="menu-link" href="footer-7.html#footer"><div>Layout 7</div></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item mega-menu">
-									<a class="menu-link" href="#"><div>Pages</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Introductory</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="about.html"><div>About Us</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="about.html"><div>Main Layout</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="about-2.html"><div>Alternate Layout</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="about-me.html"><div>About Me</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="team.html"><div>Team Members</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="gdpr.html"><div>GDPR Compliance</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="gdpr.html"><div>Default</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="gdpr-small.html"><div>Small</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="jobs.html"><div>Careers</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="profile.html"><div>User Profile</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Utility &amp; Specials</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="services.html"><div><i class="icon-star-of-life"></i>Services Pages</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="services.html"><div>Layout 1</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="services-2.html"><div>Layout 2</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="services-3.html"><div>Layout 3</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="#"><div><i class="icon-calendar3"></i>Events</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="events-list.html"><div>Events List</div></a>
-																		<ul class="sub-menu-container mega-menu-dropdown">
-																			<li class="menu-item">
-																				<a class="menu-link" href="events-list.html"><div>Right Sidebar</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="events-list-left-sidebar.html"><div>Left Sidebar</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="events-list-both-sidebar.html"><div>Both Sidebar</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="events-list-fullwidth.html"><div>Full Width</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="events-list-parallax.html"><div>Parallax List</div></a>
-																			</li>
-																		</ul>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="event-single.html"><div>Single Event</div></a>
-																		<ul class="sub-menu-container mega-menu-dropdown">
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-right-sidebar.html"><div>Right Sidebar</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-left-sidebar.html"><div>Left Sidebar</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-both-sidebar.html"><div>Both Sidebar</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single.html"><div>Full Width</div></a>
-																			</li>
-																		</ul>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="event-single-full-width-image.html"><div>Single Event - Full</div></a>
-																		<ul class="sub-menu-container mega-menu-dropdown">
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-full-width-image.html"><div>Parallax Image</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-full-width-map.html"><div>Google Map</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-full-width-slider.html"><div>Slider Gallery</div></a>
-																			</li>
-																			<li class="menu-item">
-																				<a class="menu-link" href="event-single-full-width-video.html"><div>HTML5 Video</div></a>
-																			</li>
-																		</ul>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="events-calendar.html"><div>Full Width Calendar</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="contact.html"><div><i class="icon-envelope"></i>Contact Pages</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact.html">Main Layout</a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact-2.html">Grid Layout</a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact-3.html">Right Sidebar</a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact-4.html">Both Sidebars</a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact-5.html">Modal Form</a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact-6.html">Form Overlay</a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="contact-7.html">Form Overlay Mini</a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="faqs.html"><div><i class="icon-question-circle"></i>FAQs Pages</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="faqs.html"><div>Layout 1</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="faqs-2.html"><div>Layout 2</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="faqs-3.html"><div>Layout 3</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="faqs-4.html"><div>Layout 4</div></a>
-																	</li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Layouts &amp; PageNavs</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="full-width.html"><div>Full Width</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="full-width.html"><div>Default Width</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="full-width-wide.html"><div>Wide Width</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="#"><div>Sidebars</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="right-sidebar.html"><div>Right Sidebar</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="left-sidebar.html"><div>Left Sidebar</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="both-sidebar.html"><div>Both Sidebar</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="both-right-sidebar.html"><div>Both Right Sidebar</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="both-left-sidebar.html"><div>Both Left Sidebar</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="page-submenu.html"><div>Page Submenu</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="side-navigation.html"><div>Side Navigation</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Miscellaneous</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="login-register.html"><div>Login/Register</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="login-register.html"><div>Default Layout</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="login-register-2.html"><div>Tabbed Login</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="login-register-3.html"><div>Login Accordion</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="login-1.html"><div>Dark BG Login</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="login-2.html"><div>Image BG Login</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="coming-soon.html"><div>Coming Soon</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="coming-soon.html"><div>Default Layout</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="coming-soon-2.html"><div>Parallax Image</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="coming-soon-3.html"><div>HTML5 Video</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="404.html"><div>404 Pages</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="404.html"><div>Default Layout</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="404-2.html"><div>Parallax Image</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="404-3.html"><div>HTML5 Video</div></a>
-																	</li>
-																</ul>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="#"><div>Extras</div></a>
-																<ul class="sub-menu-container mega-menu-dropdown">
-																	<li class="menu-item">
-																		<a class="menu-link" href="blank-page.html"><div>Blank Page</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="maintenance.html"><div>Maintenance Page</div></a>
-																	</li>
-																	<li class="menu-item">
-																		<a class="menu-link" href="sitemap.html"><div>Sitemap</div></a>
-																	</li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item mega-menu">
-									<a class="menu-link" href="#"><div>Portfolio</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Grids</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-1.html"><div>1 Column</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-2.html"><div>2 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-3.html"><div>3 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio.html"><div>4 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-5.html"><div>5 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-6.html"><div>6 Columns</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Masonry</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-mixed-masonry.html"><div>Mixed Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-2-masonry.html"><div>2 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-3-masonry.html"><div>3 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-masonry.html"><div>4 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-5-masonry.html"><div>5 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-6-masonry.html"><div>6 Columns</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Loading Styles</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio.html"><div>jQuery Filter</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-jpagination.html"><div>jQuery Pagination</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-infinity-scroll.html"><div>Infinity Scroll</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-ajax.html"><div>AJAX In Page</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-ajax-in-modal.html"><div>AJAX In Modal</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-filter-styles.html"><div>Filter Styles</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Single Project</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-single-extended.html"><div>Extended Item</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-single-fullwidth.html"><div>Parallax Image</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-single-gallery-full.html"><div>Slider Gallery</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-single-video-fullwidth-left-sidebar.html"><div>HTML5 Video</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-single-thumbs-right-sidebar.html"><div>Masonry Thumbs</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-single-video-both-sidebar.html"><div>Embed Video</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Layouts</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-nomargin.html"><div>Default</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-1-alt-right-sidebar.html"><div>Right Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-3-left-sidebar.html"><div>Left Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-2-both-sidebar.html"><div>Both Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-fullwidth-notitle.html"><div>100% Width</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="portfolio-parallax.html"><div>Parallax</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item mega-menu">
-									<a class="menu-link" href="#"><div>Blog</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Default</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog.html"><div>Right Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-left-sidebar.html"><div>Left Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-both-sidebar.html"><div>Both Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-full-width.html"><div>Full Width</div></a>
-															</li>
-														</ul>
-													</li>
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Timeline</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-timeline-right-sidebar.html"><div>Right Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-timeline-left-sidebar.html"><div>Left Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-timeline.html"><div>Full Width</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Masonry</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-masonry.html"><div>4 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-masonry-3.html"><div>3 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-masonry-2.html"><div>2 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-masonry-full.html"><div>100% Width</div></a>
-															</li>
-														</ul>
-													</li>
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Grid</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-grid.html"><div>4 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-grid-3.html"><div>3 Columns</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-grid-2.html"><div>2 Columns</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Small Thumbs</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-small.html"><div>Right Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-small-both-sidebar.html"><div>Both Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-small-full-width.html"><div>Full Width</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-small-alt.html"><div>Alternate Layout</div></a>
-															</li>
-														</ul>
-													</li>
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Item Splitting</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-grid.html"><div>Pagination</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-masonry.html"><div>Infinite Scroll</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-3">
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Single</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single.html"><div>Default Layout</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single-left-sidebar.html"><div>Left Sidebar</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single-full.html"><div>Full Width</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single-small.html"><div>Small Image</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single-split-right-sidebar.html"><div>Split Layout</div></a>
-															</li>
-														</ul>
-													</li>
-													<li class="menu-item mega-menu-title">
-														<a class="menu-link" href="#"><div>Comments Module</div></a>
-														<ul class="sub-menu-container">
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single-left-sidebar.html#comments"><div>Facebook Comments</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="blog-single-small.html#comments"><div>Disqus Comments</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item">
-									<a class="menu-link" href="shop.html"><div>Shop</div></a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a class="menu-link" href="shop.html"><div>4 Columns</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="shop-3.html"><div>3 Columns</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="shop-3.html"><div>Full Width</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-3-right-sidebar.html"><div>Right Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-3-left-sidebar.html"><div>Left Sidebar</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="shop-2.html"><div>2 Columns</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="shop-2-right-sidebar.html"><div>Right Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-2-left-sidebar.html"><div>Left Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-2-both-sidebar.html"><div>Both Sidebar</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="shop-1.html"><div>1 Columns</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="shop-1.html"><div>Full Width</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-1-right-sidebar.html"><div>Right Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-1-left-sidebar.html"><div>Left Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-1-both-sidebar.html"><div>Both Sidebar</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="shop-category-parallax.html"><div>Categories - Parallax</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="shop-combination-filter.html"><div>Combination Filter</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="shop-single.html"><div>Single Product</div></a>
-											<ul class="sub-menu-container">
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single.html"><div>Full Width</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single-right-sidebar.html"><div>Right Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single-left-sidebar.html"><div>Left Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single-both-sidebar.html"><div>Both Sidebar</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single-color.html"><div>Color Options</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single-sticky.html"><div>Sticky Aside</div></a>
-												</li>
-												<li class="menu-item">
-													<a class="menu-link" href="shop-single-list.html"><div>Feature List</div></a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="cart.html"><div>Cart</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="checkout.html"><div>Checkout</div></a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item mega-menu">
-									<a class="menu-link" href="#"><div>Shortcodes</div></a>
-									<div class="mega-menu-content">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item">
-														<a class="menu-link" href="animations.html"><div><i class="icon-magic"></i>Animations</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="buttons.html"><div><i class="icon-link"></i>Buttons</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="carousel.html"><div><i class="icon-heart3"></i>Carousel</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="charts.html"><div><i class="icon-bar-chart"></i>Charts</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="clients.html"><div><i class="icon-apple"></i>Clients</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="columns-grids.html"><div><i class="icon-th-large"></i>Columns</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="counters.html"><div><i class="icon-time"></i>Counters</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="read-more.html"><div><i class="icon-ellipsis-h"></i>Read More</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-datatable.html"><div><i class="icon-table"></i>Data Tables</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-datepicker.html"><div><i class="icon-calendar3"></i>Date &amp; Time Pickers</div></a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item">
-														<a class="menu-link" href="dividers.html"><div><i class="icon-indent-right"></i>Dividers</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="featured-boxes.html"><div><i class="icon-lightbulb"></i>Icon Boxes</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="gallery.html"><div><i class="icon-picture"></i>Galleries</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="headings-dropcaps.html"><div><i class="icon-pencil2"></i>Heading Styles</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="icon-lists.html"><div><i class="icon-list-alt"></i>Icon Lists</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="gradients.html"><div><i class="icon-tint"></i>Gradients</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="lightbox.html"><div><i class="icon-resize-full"></i>Lightbox</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="item-overlays.html"><div><i class="icon-line-marquee-plus"></i>Item Overlays</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="form-elements.html"><div><i class="icon-edit"></i>Form Elements</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-uploads.html"><div><i class="icon-line-upload"></i>File Uploads</div></a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item">
-														<a class="menu-link" href="lists-cards.html"><div><i class="icon-th-list"></i>Lists &amp; Cards</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="maps.html"><div><i class="icon-map-marker2"></i>Maps</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="media-embeds.html"><div><i class="icon-play"></i>Media Embeds</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="modal-popovers.html"><div><i class="icon-move"></i>Modal Boxes</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="navigation.html"><div><i class="icon-align-justify2"></i>Navigations</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="pagination-progress.html"><div><i class="icon-cogs"></i>Pagination</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="pie-skills.html"><div><i class="icon-tasks"></i>Pies &amp; Skills</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="shape-dividers.html"><div><i class="icon-shapes"></i>Shape Dividers</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-range-slider.html"><div><i class="icon-line-move"></i>Range Slider</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-ratings.html"><div><i class="icon-star3"></i>Star Ratings</div></a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item">
-														<a class="menu-link" href="pricing.html"><div><i class="icon-dollar"></i>Pricing Boxes</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="process-steps.html"><div><i class="icon-thumbs-up"></i>Process Steps</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="promo-boxes.html"><div><i class="icon-rocket"></i>Promo Boxes</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="quotes-blockquotes.html"><div><i class="icon-quote-left"></i>Blockquotes</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="responsive.html"><div><i class="icon-laptop2"></i>Responsive</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="sections.html"><div><i class="icon-folder-open"></i>Sections</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="social-icons.html"><div><i class="icon-facebook2"></i>Social Icons</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="hover-animations.html"><div><i class="icon-hand-pointer"></i>Hover Animations</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-select-picker.html"><div><i class="icon-select"></i>Select Picker</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-select-box.html"><div><i class="icon-line-columns"></i>Select Boxes</div></a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col">
-													<li class="menu-item">
-														<a class="menu-link" href="style-boxes.html"><div><i class="icon-exclamation-sign"></i>Alert Boxes</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="styled-icons.html"><div><i class="icon-flag2"></i>Styled Icons</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="tables.html"><div><i class="icon-table"></i>Tables</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="tabs.html"><div><i class="icon-star3"></i>Tabs</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="testimonials-twitter.html"><div><i class="icon-user4"></i>Testimonials</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="thumbnails-slider.html"><div><i class="icon-camera3"></i>Thumbnails</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="toggles-accordions.html"><div><i class="icon-ok-circle"></i>Toggles</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="lazy-loading.html"><div><i class="icon-line-loader"></i>Lazy Loading</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="component-radios-switches.html"><div><i class="icon-line-square-check"></i>Radios &amp; Switches</div></a>
-													</li>
-													<li class="menu-item">
-														<a class="menu-link" href="flip-cards.html"><div><i class="icon-refresh"></i>Flip Cards</div></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
+							<ul class="menu-container not-dark one-page-menu">
+								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-price"><div>Price</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>About</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
 
-						<form class="top-search-form" action="search.html" method="get">
-							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
-						</form>
+						<nav class="primary-menu">
+
+							<ul class="menu-container not-dark">
+								<li class="menu-item"><a class="menu-link color" href="#modal-register" data-lightbox="inline"><div><i class="icon-line2-login"></i>Login</div></a></li>
+							</ul>
+
+						</nav>
 
 					</div>
 				</div>
@@ -1514,857 +121,354 @@
 			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-element slider-parallax swiper_wrapper min-vh-60 min-vh-md-100 include-header">
-			<div class="slider-inner">
-
-				<div class="swiper-container swiper-parent">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide dark">
-							<div class="container">
-								<div class="slider-caption slider-caption-center">
-									<h2 data-animate="fadeInUp">Welcome to Canvas</h2>
-									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on your own Canvas.</p>
-								</div>
-							</div>
-							<div class="swiper-slide-bg" style="background-image: url('images/slider/swiper/1.jpg');"></div>
-						</div>
-						<div class="swiper-slide dark">
-							<div class="container">
-								<div class="slider-caption slider-caption-center">
-									<h2 data-animate="fadeInUp">Beautifully Flexible</h2>
-									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
-								</div>
-							</div>
-							<div class="video-wrap">
-								<video id="slide-video" poster="images/videos/explore-poster.jpg" preload="auto" loop autoplay muted>
-									<source src='images/videos/explore.webm' type='video/webm' />
-									<source src='images/videos/explore.mp4' type='video/mp4' />
-								</video>
-								<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="container">
-								<div class="slider-caption">
-									<h2 data-animate="fadeInUp">Great Performance</h2>
-									<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-								</div>
-							</div>
-							<div class="swiper-slide-bg" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;"></div>
-						</div>
-					</div>
-					<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
-					<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				</div>
-
-				<a href="#" data-scrollto="#content" data-offset="100" class="one-page-arrow dark"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
-
-			</div>
-		</section>
-
 		<!-- Content
 		============================================= -->
 		<section id="content">
-			<div class="content-wrap">
+			<div class="content-wrap py-0">
+
+				<div class="section section-curve mt-0" style="background: var(--theme1) url('demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
+
+					<div class="container center">
+						<div class="heading-block mt-4 border-bottom-0">
+							<h1 class="nott fw-semibold" style="font-size: 44px; letter-spacing: -1px">Rent Your Bike Now</h1>
+							<small class="mb-5 h6 lead">Revolutionizing your Commute Everyday in an Eco-Friendly Way.</small>
+						</div>
+
+						<a href="#modal-register" data-lightbox="inline" class="button button-large button-rounded button-shadow">Sign Up Now</a>
+						<a href="#" class="button button-large button-rounded button-border">Free Test Drive</a>
+					</div>
+
+				</div>
+
 				<div class="container">
-					<div class="row align-items-center">
-
-						<div class="col-lg-5">
-							<div class="heading-block">
-								<h1>Welcome to Canvas.<br>MultiPurpose Template.</h1>
+					<div class="card border-0 mx-auto rounded ytb-card" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">
+						<div id="ytb-video" class="yt-bg-player card-img-top rounded-top" data-quality="hd1080" data-volume="80" data-autoplay="false" data-container="self" data-video="https://youtu.be/SF0DLn3hEnc">
+							<div class="ytb-poster rounded-top" style="background: url('demos/bike/images/video-poster.jpg') center center / cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
 							</div>
-							<p class="lead">Create a website that you are gonna be proud of. Be it Business, Portfolio, Agency, Photography, eCommerce &amp; much more.</p>
+							<a href="#" id="ytb-video-button" class="play-icon"><i class="icon-play"></i><i class="icon-pause"></i></a>
 						</div>
-
-						<div class="col-lg-7 align-self-end">
-
-							<div class="position-relative overflow-hidden">
-								<img src="images/services/main-fbrowser.png" data-animate="fadeInUp" data-delay="100" alt="Chrome">
-								<img src="images/services/main-fmobile.png" style="top: 0; left: 0; min-width: 100%; min-height: 100%;" data-animate="fadeInUp" data-delay="400" alt="iPhone" class="position-absolute">
+						<div class="card-body p-5">
+							<div class="row justify-content-between align-items-center">
+								<div class="col-md-6">
+									<div class="heading-block border-bottom-0 mb-0">
+										<small class="text-black-50 text-uppercase ls3 fw-semibold">Electric Bike</small>
+										<h2 class="nott fw-semibold ls0 mb-2">Free Test Drive</h2>
+										<p class="mb-1">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+									</div>
+								</div>
+								<div class="col-md-5 mt-3 mt-md-0">
+									<div class="subscribe-widget" data-loader="button">
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control not-dark required email" placeholder="Enter your Email Address..">
+											<div class="form-check py-3">
+												<input type="checkbox" class="form-check-input" id="subscribe-news">
+												<label class="form-check-label nott ls0 fw-normal" for="subscribe-news">Get New Updates &amp; Announcements</label>
+											</div>
+											<button class="button button-shadow button-rounded m-0 nott ls0 w-100" type="submit">Subscribe</button>
+										</form>
+									</div>
+								</div>
 							</div>
-
 						</div>
+					</div>
 
+					<div class="row topmargin align-items-center mx-auto bottommargin-lg" style="max-width: 840px">
+						<div class="col-md-3 mb-2 mb-md-0">
+							<h3 class="mb-0">Partners:</h3>
+						</div>
+						<div class="col-md-9">
+							<div id="oc-images" class="owl-carousel image-carousel carousel-widget" data-margin="50" data-nav="true" data-pagi="false" data-items-xs="2" data-items-md="3" data-items-xl="4" data-loop="true" data-autoplay="3500">
+								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/1.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/2.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/3.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/4.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/5.png" alt="clients"></a></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
-				<div class="section my-0">
+				<div class="section bg-transparent topmargin-lg mb-0">
 					<div class="container">
-
-						<div class="row mt-4 col-mb-50">
-
-							<div class="col-lg-4">
-								<i class="i-plain color i-large icon-line2-screen-desktop inline-block" style="margin-bottom: 15px;"></i>
-								<div class="heading-block border-bottom-0" style="margin-bottom: 15px;">
-									<span class="before-heading">Scalable on Devices.</span>
-									<h4>Responsive &amp; Retina</h4>
-								</div>
-								<p>Employment respond committed meaningful fight against oppression social challenges rural legal aid governance. Meaningful work, implementation, process cooperation, campaign inspire.</p>
-							</div>
-
-							<div class="col-lg-4">
-								<i class="i-plain color i-large icon-line2-energy inline-block" style="margin-bottom: 15px;"></i>
-								<div class="heading-block border-bottom-0" style="margin-bottom: 15px;">
-									<span class="before-heading">Smartly Coded &amp; Maintained.</span>
-									<h4>Powerful Performance</h4>
-								</div>
-								<p>Medecins du Monde Jane Addams reduce child mortality challenges Ford Foundation. Diversification shifting landscape advocate pathway to a better life rights international. Assessment.</p>
-							</div>
-
-							<div class="col-lg-4">
-								<i class="i-plain color i-large icon-line2-equalizer inline-block" style="margin-bottom: 15px;"></i>
-								<div class="heading-block border-bottom-0" style="margin-bottom: 15px;">
-									<span class="before-heading">Flexible &amp; Customizable.</span>
-									<h4>Truly Multi-Purpose</h4>
-								</div>
-								<p>Democracy inspire breakthroughs, Rosa Parks; inspiration raise awareness natural resources. Governance impact; transformative donation philanthropy, respect reproductive.</p>
-							</div>
-
+						<div class="heading-block mx-auto center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls3 fw-semibold">Our Service</small>
+							<h2 class="text-capitalize fw-semibold ls0 mb-1" style="font-size: 36px">How do you Get Bike</h2>
+							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
 						</div>
-
-					</div>
-				</div>
-
-				<div class="container clearfix">
-
-					<div class="heading-block topmargin-lg center">
-						<h2>Even more Feature Rich</h2>
-						<span class="mx-auto">Philanthropy convener livelihoods, initiative end hunger gender rights local. John Lennon storytelling; advocate, altruism impact catalyst.</span>
-					</div>
-
-					<div class="row col-mb-50 mb-4">
-						<div class="col-lg-4 col-md-6">
-
-							<div class="feature-box flex-md-row-reverse text-md-end" data-animate="fadeIn">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-heart"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Boxed &amp; Wide Layouts</h3>
-									<p>Stretch your Website to the Full Width or make it boxed to surprise your visitors.</p>
-								</div>
+						<div class="clear"></div>
+						<div class="row showcase-section align-items-center justify-content-between clearfix">
+							<div class="col-lg-3 col-md-5">
+								<ul class="mb-0">
+									<li class="showcase-feature showcase-feature-active" data-target="#target-1">
+										<h3>Choose Your Location.</h3>
+	  									<p>Credibly conceptualize backward-compatible interna visionary.</p>
+									</li>
+									<li class="showcase-feature" data-target="#target-2">
+										<h3>Choose Your Bike.</h3>
+	  									<p>Assertively engineer standardized interactive meta-services.</p>
+									</li>
+									<li class="showcase-feature" data-target="#target-3">
+										<h3>Get Confirmation Email.</h3>
+	  									<p>Holisticly customize fully synergistic e-business continually.</p>
+									</li>
+									<li class="showcase-feature" data-target="#target-4">
+										<h3 class="text-uppercase">Start Riding.</h3>
+	  									<p>Interactively without backward-compatible enable.</p>
+									</li>
+								</ul>
 							</div>
 
-							<div class="feature-box flex-md-row-reverse text-md-end mt-5" data-animate="fadeIn" data-delay="200">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-paper"></i></a>
+							<div class="col-lg-8 col-md-7">
+								<div id="target-1" class="showcase-target showcase-target-active">
+									<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8401081858365!2d144.95373095091972!3d-37.81721397965242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1526558559407" data-lightbox="iframe">
+										<img src="demos/bike/images/mockups/1.jpg" alt="Image">
+									</a>
 								</div>
-								<div class="fbox-content">
-									<h3>Extensive Documentation</h3>
-									<p>We have covered each &amp; everything in our Docs including Videos &amp; Screenshots.</p>
+								<div id="target-2" class="showcase-target">
+									<img class="rounded" src="demos/bike/images/mockups/2.jpg" alt="Image">
 								</div>
-							</div>
-
-							<div class="feature-box flex-md-row-reverse text-md-end mt-5" data-animate="fadeIn" data-delay="400">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-layers"></i></a>
+								<div id="target-3" class="showcase-target">
+									<img class="rounded" src="demos/bike/images/mockups/3.jpg" alt="Image">
 								</div>
-								<div class="fbox-content">
-									<h3>Parallax Support</h3>
-									<p>Display your Content attractively using Parallax Sections with HTML5 Videos.</p>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="col-lg-4 d-md-none d-lg-block text-center">
-							<img src="images/services/iphone7.png" alt="iphone 2">
-						</div>
-
-						<div class="col-lg-4 col-md-6">
-
-							<div class="feature-box" data-animate="fadeIn">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-power"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>HTML5 Video</h3>
-									<p>Canvas provides support for Native HTML5 Videos that can be added to a Background.</p>
-								</div>
-							</div>
-
-							<div class="feature-box mt-5" data-animate="fadeIn" data-delay="200">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-check"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Endless Possibilities</h3>
-									<p>Complete control on each &amp; every element that provides endless customization.</p>
-								</div>
-							</div>
-
-							<div class="feature-box mt-5" data-animate="fadeIn" data-delay="400">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-bulb"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Light &amp; Dark Color Schemes</h3>
-									<p>Change your Website's Primary Scheme instantly by simply adding the dark class.</p>
-								</div>
-							</div>
-
-						</div>
-					</div>
-
-				</div>
-
-				<div class="row clearfix align-items-stretch">
-
-					<div class="col-lg-6 center col-padding" style="background: url('images/services/main-bg.jpg') center center no-repeat; background-size: cover;">
-					</div>
-
-					<div class="col-lg-6 center col-padding" style="background-color: #F5F5F5;">
-						<div class="heading-block border-bottom-0">
-							<span class="before-heading color">Easily Understandable &amp; Customizable.</span>
-							<h3>Walkthrough Videos &amp; Demos</h3>
-						</div>
-
-						<div class="center bottommargin">
-							<a class="d-block position-relative" href="https://vimeo.com/101373765" data-lightbox="iframe">
-								<img src="images/services/video.jpg" alt="Video">
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark">
-										<span class="overlay-trigger-icon size-lg op-ts op-07 bg-light text-dark" data-hover-animate="op-1" data-hover-animate-out="op-07" data-hover-parent=".row"><i class="icon-line-play"></i></span>
-									</div>
-								</div>
-							</a>
-						</div>
-						<p class="lead mb-0">Democracy inspire breakthroughs, Rosa Parks; inspiration raise awareness natural resources. Governance impact; transformative donation philanthropy, respect reproductive.</p>
-					</div>
-
-				</div>
-
-				<div class="row clearfix align-items-stretch bottommargin-lg">
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #515875;">
-						<i class="i-plain i-xlarge mx-auto icon-line2-directions"></i>
-						<div class="counter counter-lined"><span data-from="100" data-to="846" data-refresh-interval="50" data-speed="2000"></span>K</div>
-						<h5>Lines of Codes</h5>
-					</div>
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #576F9E;">
-						<i class="i-plain i-xlarge mx-auto icon-line2-graph"></i>
-						<div class="counter counter-lined"><span data-from="3000" data-to="21500" data-refresh-interval="100" data-speed="2500"></span></div>
-						<h5>KBs of HTML Files</h5>
-					</div>
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #6697B9;">
-						<i class="i-plain i-xlarge mx-auto icon-line2-layers"></i>
-						<div class="counter counter-lined"><span data-from="10" data-to="408" data-refresh-interval="25" data-speed="3500"></span></div>
-						<h5>No. of Templates</h5>
-					</div>
-
-					<div class="col-lg-3 col-md-6 dark center col-padding" style="background-color: #88C3D8;">
-						<i class="i-plain i-xlarge mx-auto icon-line2-clock"></i>
-						<div class="counter counter-lined"><span data-from="60" data-to="1400" data-refresh-interval="30" data-speed="2700"></span></div>
-						<h5>Hours of Coding</h5>
-					</div>
-
-				</div>
-
-				<div class="container clearfix">
-
-					<div class="row col-mb-50">
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-monitor"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Responsive Layout</h3>
-									<p>Powerful Layout with Responsive functionality that can be adapted to any screen size.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="200">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-eye"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Retina Ready Graphics</h3>
-									<p>Looks beautiful &amp; ultra-sharp on Retina Displays with Retina Icons, Fonts &amp; Images.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="400">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-star"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Powerful Performance</h3>
-									<p>Optimized code that are completely customizable and deliver unmatched fast performance.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="600">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-play"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>HTML5 Video</h3>
-									<p>Canvas provides support for Native HTML5 Videos that can be added to a Full Width Background.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="800">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-params"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Parallax Support</h3>
-									<p>Display your Content attractively using Parallax Sections that have unlimited customizable areas.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="1000">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-line-circle-check"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Endless Possibilities</h3>
-									<p>Complete control on each &amp; every element that provides endless customization possibilities.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="600">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-bulb"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Light &amp; Dark Color Schemes</h3>
-									<p>Change your Website's Primary Scheme instantly by simply adding the dark class to the body.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="800">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-heart2"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Boxed &amp; Wide Layouts</h3>
-									<p>Stretch your Website to the Full Width or make it boxed to surprise your visitors.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 col-lg-4">
-							<div class="feature-box fbox-sm fbox-plain" data-animate="fadeIn" data-delay="1000">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-note"></i></a>
-								</div>
-								<div class="fbox-content">
-									<h3>Extensive Documentation</h3>
-									<p>We have covered each &amp; everything in our Documentation including Videos &amp; Screenshots.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="section topmargin mb-0 border-bottom-0">
-					<div class="container clearfix">
-						<div class="heading-block center m-0">
-							<h3>Our Latest Works</h3>
-						</div>
-					</div>
-				</div>
-
-				<div id="portfolio" class="portfolio row g-0 portfolio-reveal grid-container">
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-media pf-icons">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="images/portfolio/full/1.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Open Imagination</a></h3>
-								<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-illustrations">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/2.jpg" alt="Locked Steel Gate">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="images/portfolio/full/2.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Locked Steel Gate</a></h3>
-								<span><a href="#">Illustrations</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-uielements">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="#">
-									<img src="images/portfolio/4/3.jpg" alt="Mac Sunglasses">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="https://vimeo.com/89396394" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-video.html">Mac Sunglasses</a></h3>
-								<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-icons pf-illustrations">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/4.jpg" alt="Open Imagination">
-								</a>
-								<div class="bg-overlay" data-lightbox="gallery">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="images/portfolio/full/4.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-										<a href="images/portfolio/full/4-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-gallery.html">Morning Dew</a></h3>
-								<span><a href="#">Icons</a>, <a href="#">Illustrations</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-uielements pf-media">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/5.jpg" alt="Console Activity">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="images/portfolio/full/5.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Console Activity</a></h3>
-								<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics pf-illustrations">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/6.jpg" alt="Open Imagination">
-								</a>
-								<div class="bg-overlay" data-lightbox="gallery">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="images/portfolio/full/6.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="gallery-item"><i class="icon-line-stack-2"></i></a>
-										<a href="images/portfolio/full/6-1.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="images/portfolio/full/6-2.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="images/portfolio/full/6-3.jpg" class="d-none" data-lightbox="gallery-item"></a>
-										<a href="portfolio-single-gallery.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-gallery.html">Shake It!</a></h3>
-								<span><a href="#">Illustrations</a>, <a href="#">Graphics</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-uielements pf-icons">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single-video.html">
-									<img src="images/portfolio/4/7.jpg" alt="Backpack Contents">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="https://www.youtube.com/watch?v=kuceVNBTJio" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single-video.html">Backpack Contents</a></h3>
-								<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item col-6 col-md-4 col-lg-3 pf-graphics">
-						<div class="grid-inner">
-							<div class="portfolio-image">
-								<a href="portfolio-single.html">
-									<img src="images/portfolio/4/8.jpg" alt="Sunset Bulb Glow">
-								</a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item">
-										<a href="images/portfolio/full/8.jpg" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item" data-lightbox="image" title="Image"><i class="icon-line-plus"></i></a>
-										<a href="portfolio-single.html" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350" data-hover-parent=".portfolio-item"><i class="icon-line-ellipsis"></i></a>
-									</div>
-									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-parent=".portfolio-item"></div>
-								</div>
-							</div>
-							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">Sunset Bulb Glow</a></h3>
-								<span><a href="#">Graphics</a></span>
-							</div>
-						</div>
-					</article>
-
-				</div>
-
-				<a href="portfolio.html" class="button button-full button-dark center text-end bottommargin-lg">
-					<div class="container clearfix">
-						More than 100+ predefined Portfolio Grid Layouts. <strong>See More</strong> <i class="icon-caret-right" style="top:4px;"></i>
-					</div>
-				</a>
-
-				<div class="container clearfix">
-
-					<div class="row align-items-center col-mb-50">
-						<div class="col-md-4 center">
-							<img data-animate="fadeInLeft" src="images/services/iphone6.png" alt="Iphone">
-						</div>
-
-						<div class="col-md-8 text-center text-md-start">
-							<div class="heading-block border-bottom-0">
-								<h3>Optimized for Mobile &amp; Touch Enabled Devices.</h3>
-							</div>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quod consequuntur quibusdam, enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic, obcaecati, ullam, laboriosam!</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti vero, animi suscipit id facere officia. Aspernatur, quo, quos nisi dolorum aperiam fugiat deserunt velit rerum laudantium cum magnam.</p>
-
-							<a href="#" class="button button-border button-dark button-rounded button-large ms-0 topmargin-sm">Learn more</a>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="section parallax dark mb-0" style="background-image: url('images/services/home-testi-bg.jpg'); padding: 100px 0;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">
-
-					<div class="heading-block center">
-						<h3>What Clients Say?</h3>
-					</div>
-
-					<div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
-						<div class="flexslider">
-							<div class="slider-wrap">
-								<div class="slide">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/3.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque. Repellendus, vero numquam?</p>
-										<div class="testi-meta">
-											Steve Jobs
-											<span>Apple Inc.</span>
-										</div>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/2.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
-										<div class="testi-meta">
-											Collis Ta'eed
-											<span>Envato Inc.</span>
-										</div>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="testi-image">
-										<a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails"></a>
-									</div>
-									<div class="testi-content">
-										<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum!</p>
-										<div class="testi-meta">
-											John Doe
-											<span>XYZ Inc.</span>
+								<div id="target-4" class="showcase-target">
+									<div class="rounded" style="background: url('demos/bike/images/mockups/4.jpg') bottom center no-repeat; background-size: cover; min-height: 500px;">
+										<div class="row dark m-0">
+											<div class="col-lg-5 rounded py-5 px-4" style="background-color: rgba(0,0,0,0.5);">
+												<h2 class="display-5 mb-0">Ride Away.</h2>
+												<hr>
+												<p class="lead d-none d-md-block mb-0">In Style. With Confidence. Eco-Friendly Way.</p>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 
-				<div class="section mt-0 border-top-0">
+				<div class="section bg1 mt-4" style="padding: 120px 0;">
+					<div class="container">
+						<div class="heading-block mx-auto center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls3 fw-semibold">Available Bikes</small>
+							<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Check Out Our Bikes</h2>
+							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+						</div>
+						<div class="row justify-content-between">
+							<div class="col-lg-6">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/1.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								  	<h3 class="mb-3">Trek Bike</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
+								  </div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mt-5 mt-lg-0">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/2.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								    <h3 class="mb-3">Islabikes Luath Pro Series</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
+								  </div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mt-5">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/3.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								    <h3 class="mb-3">Syracuse Bicycle</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
+								  </div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mt-5">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/4.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								    <h3 class="mb-3">Wi-Bike Range</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent" style="padding: 80px 0">
+					<div class="container">
+						<div class="heading-block mx-auto border-bottom-0 center" style="max-width: 600px">
+							<i class="icon-et-bike d-block h1 mb-4 text-black"></i>
+							<small class="text-black-50 text-uppercase ls3 fw-semibold">What We Have Done</small>
+							<h2 class="nott fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px"><span class="counter counter-inherit text-dark inline-block">More than <code class="color"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></code>+</span> Bikes are already Rented in <span>11</span> Countries.</h2>
+							<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+						</div>
+						<ul class="skills mx-auto" style="max-width: 600px">
+							<li data-percent="80">
+								<div class="progress">
+									<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></div></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="section-price" class="section" style="background: url('demos/bike/images/bg.png') repeat-y center top; padding: 100px 0;">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-md-7">
+								<div class="heading-block border-bottom-0">
+									<small class="text-black-50 text-uppercase ls3 fw-semibold">Pricing Table</small>
+									<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Bike Rental Prices</h2>
+									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate vero esse ea hic quod veniam quam accusamus laboriosam ipsam provident voluptatibus iste earum facilis voluptatum, ducimus quis quae blanditiis temporibus minima libero! Doloribus sapiente voluptatibus cupiditate autem debitis id.</p>
+								</div>
+								<div class="row">
+									<div class="col-6">
+										<!-- Bikes Slider -->
+										<input class="range-slider-bikes" />
+										<label class="mt-2" for="">Select Number of Bikes</label>
+									</div>
+									<div class="col-6">
+										<!-- Days Slider -->
+										<input class="range-slider-days" />
+										<label class="mt-2" for="">Select Number of Days</label>
+									</div>
+								</div>
+								<div class="row mt-4 mt-md-5 clearfix">
+									<div class="col-sm-6">
+										<h4 class="fw-semibold mb-3">Free Plan:</h4>
+										<ul class="ms-3 mb-2">
+											<li class="mb-2">1Hr Free Trail.</li>
+											<li class="mb-2">Used Bikes.</li>
+											<li class="mb-2">No Electric Bikes.</li>
+											<li class="mb-2">Money Back Guarantee.</li>
+										</ul>
+									</div>
+									<div class="col-sm-6 mt-4 mt-sm-0">
+										<h4 class="fw-semibold mb-3">Pro Plans:</h4>
+										<ul class="ms-3 mb-2">
+											<li class="mb-2">Door - Door Service.</li>
+											<li class="mb-2">Choose any Bike.</li>
+											<li class="mb-2">Electric Bikes Included.</li>
+											<li class="mb-2">Monthly Discounts Available.</li>
+											<li class="mb-2">Money Back Guarantee.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-5 mt-4 mt-md-0 sticky-sidebar-wrap">
+								<div class="card text-center border-0 shadow sticky-sidebar py-4">
+									<div class="card-body py-4">
+										<h3 class="card-title fw-normal mb-0">Your Plan</h3>
+										<!-- Price Value -->
+										<div class="pricing-price fw-bold py-3"></div>
+										<p class="card-text pricing-sub text-muted">$2/Days Per Bikes</p>
+									</div>
+									<div class="line my-1"></div>
+									<div class="card-body py-4">
+										<ul class="iconlist ms-0" style="opacity: .8">
+											<li class="mb-2">All New Bikes</li>
+											<li class="mb-2">Door - Door Service</li>
+											<li class="mb-2">Provide One Helmet/Bike</li>
+											<li>Credit Cards Accepted</li>
+										</ul>
+										<a href="#" class="button button-rounded button-large ls0 fw-normal ms-0 mb-2 nott">Rent Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent clearfix">
 					<div class="container clearfix">
-						<div class="heading-block center m-0">
-							<h3>Latest from the Blog</h3>
+
+						<div class="heading-block mx-auto border-bottom-0 center clearfix" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls3 fw-semibold">Accessories</small>
+							<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Looking for more Addons?</h2>
+							<p class="mb-3">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+							<div class="center"><div class="button ls0 button-rounded button-border nott fw-normal ">View More</div></div>
 						</div>
-					</div>
-				</div>
 
-				<div class="container">
-					<div class="row posts-md col-mb-30">
+						<div class="row clearfix">
 
-						<div class="col-lg-3 col-md-6">
-							<div class="entry">
-								<div class="entry-image">
-									<a href="#"><img src="images/magazine/thumb/1.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-title title-xs nott">
-									<h3><a href="blog-single.html">Bloomberg smart cities; change-makers economic security</a></h3>
-								</div>
-								<div class="entry-meta">
-									<ul>
-										<li><i class="icon-calendar3"></i> 13th Jun 2021</li>
-										<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 53</a></li>
-									</ul>
-								</div>
-								<div class="entry-content">
-									<p>Prevention effect, advocate dialogue rural development lifting people up community civil society. Catalyst, grantees leverage.</p>
-								</div>
+							<div class="col-lg-3 col-sm-6">
+								<a href="#" class="portfolio-item border d-block bg1">
+									<div class="portfolio-image">
+										<img src="demos/bike/images/items/1.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Bike Helmet</h3>
+										<h6 class="text-dark">&dollar; 5.99/Day</h6>
+									</div>
+								</a>
 							</div>
-						</div>
 
-						<div class="col-lg-3 col-md-6">
-							<div class="entry">
-								<div class="entry-image">
-									<a href="#"><img src="images/magazine/thumb/2.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-title title-xs nott">
-									<h3><a href="blog-single.html">Medicine new approaches communities, outcomes partnership</a></h3>
-								</div>
-								<div class="entry-meta">
-									<ul>
-										<li><i class="icon-calendar3"></i> 24th Feb 2021</li>
-										<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 17</a></li>
-									</ul>
-								</div>
-								<div class="entry-content">
-									<p>Cross-agency coordination clean water rural, promising development turmoil inclusive education transformative community.</p>
-								</div>
+							<div class="col-lg-3 col-sm-6 mt-4 mt-sm-0">
+								<a href="#" class="portfolio-item border d-block">
+									<div class="portfolio-image">
+										<img src="demos/bike/images/items/2.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Leather Gloves</h3>
+										<h6 class="text-dark">&dollar; 2.19/Day</h6>
+									</div>
+								</a>
 							</div>
-						</div>
 
-						<div class="col-lg-3 col-md-6">
-							<div class="entry">
-								<div class="entry-image">
-									<a href="#"><img src="images/magazine/thumb/3.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-title title-xs nott">
-									<h3><a href="blog-single.html">Significant altruism planned giving insurmountable challenges liberal</a></h3>
-								</div>
-								<div class="entry-meta">
-									<ul>
-										<li><i class="icon-calendar3"></i> 30th Dec 2021</li>
-										<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 13</a></li>
-									</ul>
-								</div>
-								<div class="entry-content">
-									<p>Micro-finance; vaccines peaceful contribution citizens of change generosity. Measures design thinking accelerate progress medical initiative.</p>
-								</div>
+							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
+								<a href="#" class="portfolio-item border d-block bg1">
+									<div class="portfolio-image">
+										<img src="demos/bike/images/items/3.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Water Bottles</h3>
+										<h6 class="text-dark">&dollar; 3.99/Day</h6>
+									</div>
+								</a>
 							</div>
-						</div>
 
-						<div class="col-lg-3 col-md-6">
-							<div class="entry">
-								<div class="entry-image">
-									<a href="#"><img src="images/magazine/thumb/4.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-title title-xs nott">
-									<h3><a href="blog-single.html">Compassion conflict resolution, progressive; tackle</a></h3>
-								</div>
-								<div class="entry-meta">
-									<ul>
-										<li><i class="icon-calendar3"></i> 15th Jan 2021</li>
-										<li><a href="blog-single.html#comments"><i class="icon-comments"></i> 54</a></li>
-									</ul>
-								</div>
-								<div class="entry-content">
-									<p>Community health workers best practices, effectiveness meaningful work The Elders fairness. Our ambitions local solutions globalization.</p>
-								</div>
+							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
+								<a href="#" class="portfolio-item border d-block">
+									<div class="portfolio-image">
+										<img src="demos/bike/images/items/4.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Bottle Holder</h3>
+										<h6 class="text-dark">&dollar; 1.99/Day</h6>
+									</div>
+								</a>
 							</div>
 						</div>
 
 					</div>
 				</div>
 
-				<div class="section">
-					<div class="container clearfix">
+				<div class="section bg-transparent clearfix">
+					<div class="container">
+						<div class="row align-items-center justify-content-between">
+							<div class="col-lg-6">
+								<div class="heading-block border-bottom-0 mb-0">
+									<small class="text-black-50 text-uppercase ls3 fw-semibold">Contact Us</small>
+									<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 44px; letter-spacing: -1px">Still Can't Decide?!</h2>
+									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+								</div>
+							</div>
 
-						<div class="heading-block topmargin-sm center">
-							<h3>Meet Our Team</h3>
+							<div class="col-lg-6 d-inline-block d-sm-inline-flex justify-content-start justify-content-lg-end">
+								<div class="button button-xlarge ls0 button-rounded button-border nott fw-normal ">Start Renting</div>
+								<div class="button button-xlarge ls0 button-rounded button-shadow nott fw-normal ">Contact Us</div>
+							</div>
 						</div>
-
-						<div class="row">
-
-							<div class="col-lg-3 col-md-6 bottommargin">
-
-								<div class="team">
-									<div class="team-image">
-										<img src="images/team/3.jpg" alt="John Doe">
-									</div>
-									<div class="team-desc team-desc-bg">
-										<div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-											<i class="icon-facebook"></i>
-											<i class="icon-facebook"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-											<i class="icon-twitter"></i>
-											<i class="icon-twitter"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-											<i class="icon-gplus"></i>
-											<i class="icon-gplus"></i>
-										</a>
-									</div>
-								</div>
-
-							</div>
-
-							<div class="col-lg-3 col-md-6 bottommargin">
-
-								<div class="team">
-									<div class="team-image">
-										<img src="images/team/2.jpg" alt="Josh Clark">
-									</div>
-									<div class="team-desc team-desc-bg">
-										<div class="team-title"><h4>Josh Clark</h4><span>Co-Founder</span></div>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-											<i class="icon-facebook"></i>
-											<i class="icon-facebook"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-											<i class="icon-twitter"></i>
-											<i class="icon-twitter"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-											<i class="icon-gplus"></i>
-											<i class="icon-gplus"></i>
-										</a>
-									</div>
-								</div>
-
-							</div>
-
-							<div class="col-lg-3 col-md-6 bottommargin">
-
-								<div class="team">
-									<div class="team-image">
-										<img src="images/team/8.jpg" alt="Mary Jane">
-									</div>
-									<div class="team-desc team-desc-bg">
-										<div class="team-title"><h4>Mary Jane</h4><span>Sales</span></div>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-											<i class="icon-facebook"></i>
-											<i class="icon-facebook"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-											<i class="icon-twitter"></i>
-											<i class="icon-twitter"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-											<i class="icon-gplus"></i>
-											<i class="icon-gplus"></i>
-										</a>
-									</div>
-								</div>
-
-							</div>
-
-							<div class="col-lg-3 col-md-6 bottommargin">
-
-								<div class="team">
-									<div class="team-image">
-										<img src="images/team/4.jpg" alt="Nix Maxwell">
-									</div>
-									<div class="team-desc team-desc-bg">
-										<div class="team-title"><h4>Nix Maxwell</h4><span>Support</span></div>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-											<i class="icon-facebook"></i>
-											<i class="icon-facebook"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-twitter">
-											<i class="icon-twitter"></i>
-											<i class="icon-twitter"></i>
-										</a>
-										<a href="#" class="social-icon inline-block si-small si-light si-rounded si-gplus">
-											<i class="icon-gplus"></i>
-											<i class="icon-gplus"></i>
-										</a>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-
 					</div>
-				</div>
-
-				<div class="container clearfix">
-
-					<div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="60" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
-
-						<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/3.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/4.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/5.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/6.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></div>
-
-					</div>
-
-
 				</div>
 			</div>
 		</section><!-- #content end -->
@@ -2378,242 +482,98 @@
 				============================================= -->
 				<div class="footer-widgets-wrap">
 
-					<div class="row col-mb-50">
-						<div class="col-lg-8">
-
-							<div class="row col-mb-50">
-								<div class="col-md-4">
-
-									<div class="widget clearfix">
-
-										<img src="images/footer-widget-logo.png" alt="Image" class="footer-logo">
-
-										<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
-
-										<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
-											<address>
-												<strong>Headquarters:</strong><br>
-												795 Folsom Ave, Suite 600<br>
-												San Francisco, CA 94107<br>
-											</address>
-											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-											<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
-											<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-										</div>
-
-									</div>
-
+					<div class="row">
+						<div class="col-6 col-lg-4">
+							<img class="mb-2" src="demos/bike/images/logo-foo.png" alt="Image" width="123">
+							<small class="d-block mb-4 text-muted">&copy; 2020-2021</small>
+							<div class="row my-4">
+								<div class="col-md-6">
+									<div class="counter counter-small text-light fw-normal"><span class="h4" data-from="50" data-to="8465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="m-0 text-muted">Total Rented</h5>
 								</div>
 
-								<div class="col-md-4">
-
-									<div class="widget widget_links clearfix">
-
-										<h4>Blogroll</h4>
-
-										<ul>
-											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
-											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
-											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
-											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
-										</ul>
-
-									</div>
-
-								</div>
-
-								<div class="col-md-4">
-
-									<div class="widget clearfix">
-										<h4>Recent Posts</h4>
-
-										<div class="posts-sm row col-mb-30" id="post-list-footer">
-											<div class="entry col-12">
-												<div class="grid-inner row">
-													<div class="col">
-														<div class="entry-title">
-															<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
-														</div>
-														<div class="entry-meta">
-															<ul>
-																<li>10th July 2021</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry col-12">
-												<div class="grid-inner row">
-													<div class="col">
-														<div class="entry-title">
-															<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-														</div>
-														<div class="entry-meta">
-															<ul>
-																<li>10th July 2021</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="entry col-12">
-												<div class="grid-inner row">
-													<div class="col">
-														<div class="entry-title">
-															<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-														</div>
-														<div class="entry-meta">
-															<ul>
-																<li>10th July 2021</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
+								<div class="col-md-6">
+									<div class="counter counter-small text-light fw-normal"><span class="h4" data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="m-0 text-muted">Clients Served</h5>
 								</div>
 							</div>
-
+							<div class="clear"></div>
+							<div>
+								<a href="#" class="social-icon me-2 si-colored si-rounded si-small si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" class="social-icon me-2 si-colored si-rounded si-small si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" class="social-icon me-2 si-colored si-rounded si-small si-youtube">
+									<i class="icon-youtube"></i>
+									<i class="icon-youtube"></i>
+								</a>
+								<a href="#" class="social-icon si-colored si-rounded si-small si-appstore">
+									<i class="icon-apple"></i>
+									<i class="icon-apple"></i>
+								</a>
+							</div>
 						</div>
-
-						<div class="col-lg-4">
-
-							<div class="row col-mb-50">
-								<div class="col-md-4 col-lg-12">
-									<div class="widget clearfix" style="margin-bottom: -20px;">
-
-										<div class="row">
-											<div class="col-lg-6 bottommargin-sm">
-												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
-												<h5 class="mb-0">Total Downloads</h5>
-											</div>
-
-											<div class="col-lg-6 bottommargin-sm">
-												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-												<h5 class="mb-0">Clients</h5>
-											</div>
-										</div>
-
-									</div>
-								</div>
-
-								<div class="col-md-5 col-lg-12">
-									<div class="widget subscribe-widget clearfix">
-										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-										<div class="widget-subscribe-form-result"></div>
-										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
-											<div class="input-group mx-auto">
-												<div class="input-group-text"><i class="icon-email2"></i></div>
-												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-												<button class="btn btn-success" type="submit">Subscribe</button>
-											</div>
-										</form>
-									</div>
-								</div>
-
-								<div class="col-md-3 col-lg-12">
-									<div class="widget clearfix" style="margin-bottom: -20px;">
-
-										<div class="row">
-											<div class="col-6 col-md-12 col-lg-6 clearfix bottommargin-sm">
-												<a href="#" class="social-icon si-dark si-colored si-facebook mb-0" style="margin-right: 10px;">
-													<i class="icon-facebook"></i>
-													<i class="icon-facebook"></i>
-												</a>
-												<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
-											</div>
-											<div class="col-6 col-md-12 col-lg-6 clearfix">
-												<a href="#" class="social-icon si-dark si-colored si-rss mb-0" style="margin-right: 10px;">
-													<i class="icon-rss"></i>
-													<i class="icon-rss"></i>
-												</a>
-												<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
-											</div>
-										</div>
-
-									</div>
-								</div>
-
-							</div>
-
+						<div class="col-6 col-lg-3">
+							<h4>Features</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a class="text-muted" href="#">Cool stuff</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Random feature</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Team feature</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Stuff for developers</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Another one</a></li>
+								<li><a class="text-muted" href="#">Last time</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
+							<h4>Resources</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a class="text-muted" href="#">Resource</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Resource name</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Another resource</a></li>
+								<li><a class="text-muted" href="#">Final resource</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-2 mt-5 mt-lg-0">
+							<h4>About</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a class="text-muted" href="#">Team</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Locations</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Privacy</a></li>
+								<li><a class="text-muted" href="#">Terms</a></li>
+							</ul>
 						</div>
 					</div>
 
 				</div><!-- .footer-widgets-wrap end -->
 
 			</div>
-
 			<!-- Copyrights
 			============================================= -->
 			<div id="copyrights">
-				<div class="container">
 
-					<div class="row col-mb-30">
+				<div class="container clearfix">
 
-						<div class="col-md-6 text-center text-md-start">
+					<div class="row align-items-center justify-content-between">
+						<div class="col-md-6">
 							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
 							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
-						<div class="col-md-6 text-center text-md-end">
-							<div class="d-flex justify-content-center justify-content-md-end">
-								<a href="#" class="social-icon si-small si-borderless si-facebook">
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-gplus">
-									<i class="icon-gplus"></i>
-									<i class="icon-gplus"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-pinterest">
-									<i class="icon-pinterest"></i>
-									<i class="icon-pinterest"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-vimeo">
-									<i class="icon-vimeo"></i>
-									<i class="icon-vimeo"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-github">
-									<i class="icon-github"></i>
-									<i class="icon-github"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-yahoo">
-									<i class="icon-yahoo"></i>
-									<i class="icon-yahoo"></i>
-								</a>
-
-								<a href="#" class="social-icon si-small si-borderless si-linkedin">
-									<i class="icon-linkedin"></i>
-									<i class="icon-linkedin"></i>
-								</a>
+						<div class="col-md-6 d-flex justify-content-md-end mt-4 mt-md-0">
+							<div class="copyrights-menu copyright-links mb-0 clearfix">
+								<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Price</a>/<a href="#">Contact</a>
 							</div>
-
-							<div class="clear"></div>
-
-							<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
 						</div>
-
 					</div>
 
 				</div>
+
 			</div><!-- #copyrights end -->
+
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
@@ -2627,9 +587,95 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 
+	<script src="js/components/rangeslider.min.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
+
+	<script>
+		$('#ytb-video').on('click', function(e){
+			e.preventDefault();
+
+			if( $(this).hasClass('video-played') ) {
+				$('#ytb-video').YTPPause();
+			} else {
+				$('#ytb-video').YTPPlay();
+				$('.ytb-poster').stop(true,true).fadeTo( "slow", 0 );
+			}
+
+			$(this).toggleClass('video-played');
+		});
+
+
+		function showcaseSection( element ){
+
+			var otherElements = element.parents('.showcase-section').find('.showcase-feature'),
+				elementTarget = jQuery( element.attr('data-target') ),
+				otherTargets = element.parents('.showcase-section').find('.showcase-target');
+
+			otherElements.removeClass('showcase-feature-active');
+			element.addClass('showcase-feature-active');
+			otherTargets.removeClass('showcase-target-active');
+			elementTarget.addClass('showcase-target-active');
+
+		}
+
+		jQuery('.showcase-feature').hover( function(){
+			showcaseSection( jQuery(this) );
+		});
+
+		$(document).ready( function() {
+
+			var pricingBikes = 1,
+				days = 1,
+				elementbikes = $(".range-slider-bikes"),
+				elementDays = $(".range-slider-days");
+
+			elementbikes.ionRangeSlider({
+				grid: false,
+				step: 1,
+				min: 1,
+				from:1,
+				max: 5,
+				postfix: ' Bike(s)',
+				onStart: function(data){
+					pricingBikes = data.from;
+				}
+			});
+
+			elementbikes.on( 'change', function(){
+				pricingBikes = $(this).prop('value');
+				calculatePrice( pricingBikes, days );
+			});
+
+			elementDays.ionRangeSlider({
+				grid: false,
+				step: 1,
+				min: 1,
+				from: 4,
+				max: 30,
+				postfix: ' Days',
+				onStart: function(data){
+					days = data.from;
+					console.log(data);
+				}
+			});
+
+			elementDays.on( 'onStart change', function(){
+				days = $(this).prop('value');
+				calculatePrice( pricingBikes, days );
+			});
+
+			calculatePrice( pricingBikes, days );
+
+			function calculatePrice( bikes, days ) {
+				var pricingValue = ( Number(bikes) * 1 ) * ( Number(days) * 2 );
+				jQuery('.pricing-price').html( '$'+pricingValue );
+			}
+
+		});
+	</script>
 
 </body>
 </html>
