@@ -7,32 +7,169 @@
 
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="bootstrap.css" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700|Playfair+Display:400,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="style.css" type="text/css" />
 
-	<link rel="stylesheet" href="dark.css" type="text/css" />
-	<link rel="stylesheet" href="font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="animate.css" type="text/css" />
-	<link rel="stylesheet" href="magnific-popup.css" type="text/css" />
+	<!-- One Page Module Specific Stylesheet -->
+	<link rel="stylesheet" href="one-page/onepage.css" type="text/css" />
+	<!-- / -->
 
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 	<link rel="stylesheet" href="one-page/css/et-line.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
 
-	<link rel="stylesheet" href="css/components/ion.rangeslider.css" type="text/css" />
+	<link rel="stylesheet" href="css/fonts.css" type="text/css" />
+	<link rel="stylesheet" href="css/colors.php?color=6C63FF" type="text/css" />
 
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<link rel="stylesheet" href="css/colors.php?color=e83c3c" type="text/css" />
-
-	<!-- Hosting Demo Specific Stylesheet -->
-	<link rel="stylesheet" href="demos/bike/css/fonts.css" type="text/css" />
-	<link rel="stylesheet" href="bike.css" type="text/css" />
-	<!-- / -->
 
 	<!-- Document Title
 	============================================= -->
-	<title>Bike Rent Demo | Canvas</title>
+	<title>Designer - One Page | Canvas</title>
+
+	<style>
+
+		body.stretched #header.full-header .container { padding-right: 56px; }
+
+		.slider-element {
+			background-image: linear-gradient(to right, #FFF 20%, rgba(108, 99, 255, .2) 100%);
+			background-position: right top;
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 30px 0;
+		}
+
+		.top-title {
+			display: block;
+			position: relative;
+			padding-left: 60px;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #6C63FF;
+		}
+
+		.top-title::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 50px;
+			height: 2px;
+			margin-top: -1px;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.slider-element p {
+			font-size: 16px;
+    		line-height: 1.75;
+    		font-weight: 400;
+    		color: #999;
+		}
+
+		.social-icons {
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 0 20px;
+			height: 100vh;
+			background-color: #FFF;
+			z-index: 5;
+		}
+
+		@media (max-width: 991.98px) {
+			.social-icons {
+				position: relative;
+				padding: 0 20px;
+				height: auto;
+				width: 100%;
+				background-color: transparent;
+			}
+
+			.social-icons .separator { display: none; }
+		}
+
+		.social-icons .social-icon {
+			position: relative;
+			margin: 4px 2px;
+			color: rgba(0, 0, 0, 0.4);
+		}
+		.social-icons .separator {
+			width: 2px;
+			height: 60px;
+			background-color: rgba(0, 0, 0, 0.06);
+			margin: 10px 0;
+		}
+
+		.form-group {
+			position: relative;
+			padding: 10px 20px;
+			border-radius: 2px;
+			background-color: #FFF;
+		}
+		#widget-subscribe-form-email-error {
+			text-indent: -9999px;
+			height: 0;
+			margin: 0 !important;
+		}
+
+		#widget-subscribe-form-email-error { display: block !important; }
+
+		.form-group input + #widget-subscribe-form-email-error::after {
+			content: "";
+			font-family: 'font-icons';
+			position: absolute;
+			top: 50%;
+			right: 5%;
+			font-size: 24px;
+			transform: translateY(-50%);
+			text-indent: 0;
+			cursor: default;
+			color: red;
+		}
+
+		.form-group input.error + #widget-subscribe-form-email-error::after {
+			content: "\e9f7";
+			color: red;
+		}
+		.form-control.valid + #widget-subscribe-form-email-error::after {
+			content: "\e988";
+			color: green;
+		}
+
+		.form-group input:not(:focus) + #widget-subscribe-form-email-error::after { content: none; }
+
+		.form-group label {
+			font-size: 13px;
+			font-weight: 500;
+			text-transform: none;
+			letter-spacing: 0;
+			margin-bottom: 0;
+		}
+
+		.form-group input {
+			position: relative;
+			background-color: transparent;
+			border: 0;
+			padding: 0;
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		.form-group input:active,
+		.form-group input:focus {
+		    border-color: transparent;
+		    background-color: transparent;
+		}
+
+	</style>
 
 </head>
 
@@ -42,537 +179,822 @@
 	============================================= -->
 	<div id="wrapper" class="clearfix">
 
-		<!-- Modal -->
-		<div class="modal1 mfp-hide" id="modal-register">
-			<div class="card mx-auto" style="max-width: 540px;">
-				<div class="card-header py-3 bg-transparent center">
-					<h3 class="mb-0 fw-normal">Hello, Welcome Back</h3>
-				</div>
-				<div class="card-body mx-auto py-5" style="max-width: 70%;">
-
-					<a href="#" class="button button-large button-rounded w-100 si-colored si-facebook nott fw-normal ls0 center m-0"><i class="icon-facebook-sign"></i> Log in with Facebook</a>
-
-					<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
-
-					<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
-
-						<div class="col-12">
-							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username" />
-						</div>
-
-						<div class="col-12 mt-4">
-							<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password" />
-						</div>
-
-						<div class="col-12">
-							<a href="#" class="float-end text-dark fw-light mt-2">Forgot Password?</a>
-						</div>
-
-						<div class="col-12 mt-4">
-							<button class="button button-rounded w-100 m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
-						</div>
-					</form>
-				</div>
-				<div class="card-footer py-4 center">
-					<p class="mb-0">Don't have an account? <a href="#"><u>Sign up</u></a></p>
-				</div>
-			</div>
-		</div>
-
 		<!-- Header
 		============================================= -->
-		<header id="header" class="border-bottom header-size-custom" data-sticky-shrink="false">
+		<header id="header" class="full-header header-size-custom" data-sticky-shrink="false">
+
 			<div id="header-wrap">
 				<div class="container">
-					<div class="header-row justify-content-lg-between">
+					<div class="header-row">
 
 						<!-- Logo
 						============================================= -->
-						<div id="logo" class="me-lg-0">
-							<a href="index.html" class="standard-logo" data-dark-logo="demos/business/images/logo-dark.png"><img src="demos/business/images/logo.png" alt="Canvas Logo"></a>
-							<a href="index.html" class="retina-logo" data-dark-logo="demos/business/images/logo-dark@2x.png"><img src="demos/business/images/logo@2x.png" alt="Canvas Logo"></a>
+						<div id="logo">
+							<a href="index.html" class="standard-logo" data-dark-logo="one-page/images/canvasone-dark.png"><img src="one-page/images/canvasone.png" alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo" data-dark-logo="one-page/images/canvasone-dark@2x.png"><img src="one-page/images/canvasone@2x.png" alt="Canvas Logo"></a>
 						</div><!-- #logo end -->
 
 						<div id="primary-menu-trigger">
 							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
 						</div>
 
+						<!-- Primary Navigation
+						============================================= -->
 						<nav class="primary-menu">
 
-							<ul class="menu-container not-dark one-page-menu">
-								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-price"><div>Price</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>About</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							<ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#wrapper"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-about"><div>About</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-works"><div>Works</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-services"><div>Services</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-blog"><div>Blog</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-contact"><div>Contact</div></a>
+								</li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
-
-						<nav class="primary-menu">
-
-							<ul class="menu-container not-dark">
-								<li class="menu-item"><a class="menu-link color" href="#modal-register" data-lightbox="inline"><div><i class="icon-line2-login"></i>Login</div></a></li>
-							</ul>
-
-						</nav>
 
 					</div>
 				</div>
 			</div>
 			<div class="header-wrap-clone"></div>
+
 		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header">
+
+			<div class="slider-inner">
+				<div class="vertical-middle">
+
+					<div class="container">
+						<div class="row align-items-center justify-content-between py-5">
+
+							<div class="col-lg-5 col-md-6">
+								<div class="subscribe-widget" data-loader="button" data-alert-type="inline">
+									<h1 class="display-4 nott" style="letter-spacing:-1px; line-height: 1;"><div class="top-title">We're</div>
+										<span class="text-rotater nocolor" style="font-family: 'Playfair Display';" data-separator="|" data-rotate="fadeIn" data-speed="1300"><span class="t-rotate fw-bold opm-large-word">Creative.|Different.|Designer.|Digital.|Vision.|Developer.</span></span>
+									</h1>
+									<p class="mb-5">Globally innovate principle-centered partnerships with progressive convergence. Interactively mesh best-of-breed functionalities without an expanded array of methodologies.</p>
+									<div class="widget-subscribe-form-result"></div>
+									<form id="slider-subscribe-form" action="include/subscribe.php" method="post" class="nobottommargin">
+										<div class="form-group shadow-sm border rounded">
+											<label for="widget-subscribe-form-email" class="color">Enter your Email Adress:</label>
+											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required" placeholder="user@website.com">
+											<label id="widget-subscribe-form-email-error" class="error" for="widget-subscribe-form-email"></label>
+										</div>
+										<button href="#" class="button button-xlarge button-rounded ms-0 mt-2 shadow ls0" type="submit">Receive Quotes</button>
+										<a href="https://vimeo.com/87766904" class="text-uppercase fw-bold text-dark d-block d-lg-inline-block ms-0 ms-lg-4 mt-3 mt-lg-0" data-lightbox="iframe"><i class="icon-play me-2"></i>Play Video</a>
+									</form>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-md-5">
+								<img src="one-page/images/page/design.svg" alt="Image">
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="social-icons d-flex">
+				<div class="d-flex flex-lg-column flex-row align-items-center justify-content-lg-center justify-content-end w-100">
+					<span class="separator"></span>
+					<a href="#" class="social-icon si-rounded si-colored si-small si-facebook" title="Facebook">
+						<i class="icon-facebook"></i>
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" class="social-icon si-rounded si-colored si-small si-twitter" title="Twitter">
+						<i class="icon-twitter"></i>
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" class="social-icon si-rounded si-colored si-small si-github" title="Github">
+						<i class="icon-github"></i>
+						<i class="icon-github"></i>
+					</a>
+					<a href="#" class="social-icon si-rounded si-colored si-small si-pinterest" title="Pinterest">
+						<i class="icon-pinterest"></i>
+						<i class="icon-pinterest"></i>
+					</a>
+					<span class="separator"></span>
+				</div>
+			</div>
+
+			<a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="65" class="one-page-arrow ms-2 mt-5" style="left: 80px;"><i class="icon-line-arrow-down infinite animated fadeInDown"></i></a>
+
+		</section><!-- #slider end -->
 
 		<!-- Content
 		============================================= -->
 		<section id="content">
 			<div class="content-wrap py-0">
 
-				<div class="section section-curve mt-0" style="background: var(--theme1) url('demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
+				<div id="section-about" class="center page-section">
 
-					<div class="container center">
-						<div class="heading-block mt-4 border-bottom-0">
-							<h1 class="nott fw-semibold" style="font-size: 44px; letter-spacing: -1px">Rent Your Bike Now</h1>
-							<small class="mb-5 h6 lead">Revolutionizing your Commute Everyday in an Eco-Friendly Way.</small>
-						</div>
+					<div class="container clearfix">
 
-						<a href="#modal-register" data-lightbox="inline" class="button button-large button-rounded button-shadow">Sign Up Now</a>
-						<a href="#" class="button button-large button-rounded button-border">Free Test Drive</a>
-					</div>
+						<h2 class="mx-auto bottommargin font-body" style="max-width: 700px; font-size: 40px;">A digital web studio creating stunning &amp; engaging online experiences</h2>
 
-				</div>
+						<p class="lead mx-auto bottommargin" style="max-width: 800px;">Ford Foundation reduce child mortality fight against oppression refugee disruption pursue these aspirations effect. Free-speech Nelson Mandela change liberal; challenges of our times sustainability institutions.</p>
 
-				<div class="container">
-					<div class="card border-0 mx-auto rounded ytb-card" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">
-						<div id="ytb-video" class="yt-bg-player card-img-top rounded-top" data-quality="hd1080" data-volume="80" data-autoplay="false" data-container="self" data-video="https://youtu.be/SF0DLn3hEnc">
-							<div class="ytb-poster rounded-top" style="background: url('demos/bike/images/video-poster.jpg') center center / cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
-							</div>
-							<a href="#" id="ytb-video-button" class="play-icon"><i class="icon-play"></i><i class="icon-pause"></i></a>
-						</div>
-						<div class="card-body p-5">
-							<div class="row justify-content-between align-items-center">
-								<div class="col-md-6">
-									<div class="heading-block border-bottom-0 mb-0">
-										<small class="text-black-50 text-uppercase ls3 fw-semibold">Electric Bike</small>
-										<h2 class="nott fw-semibold ls0 mb-2">Free Test Drive</h2>
-										<p class="mb-1">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-									</div>
-								</div>
-								<div class="col-md-5 mt-3 mt-md-0">
-									<div class="subscribe-widget" data-loader="button">
-										<div class="widget-subscribe-form-result"></div>
-										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
-											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control not-dark required email" placeholder="Enter your Email Address..">
-											<div class="form-check py-3">
-												<input type="checkbox" class="form-check-input" id="subscribe-news">
-												<label class="form-check-label nott ls0 fw-normal" for="subscribe-news">Get New Updates &amp; Announcements</label>
-											</div>
-											<button class="button button-shadow button-rounded m-0 nott ls0 w-100" type="submit">Subscribe</button>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+						<p class="bottommargin" style="font-size: 16px;"><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70" class="more-link">Learn more <i class="icon-angle-right"></i></a></p>
 
-					<div class="row topmargin align-items-center mx-auto bottommargin-lg" style="max-width: 840px">
-						<div class="col-md-3 mb-2 mb-md-0">
-							<h3 class="mb-0">Partners:</h3>
-						</div>
-						<div class="col-md-9">
-							<div id="oc-images" class="owl-carousel image-carousel carousel-widget" data-margin="50" data-nav="true" data-pagi="false" data-items-xs="2" data-items-md="3" data-items-xl="4" data-loop="true" data-autoplay="3500">
-								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/1.png" alt="clients"></a></div>
-								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/2.png" alt="clients"></a></div>
-								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/3.png" alt="clients"></a></div>
-								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/4.png" alt="clients"></a></div>
-								<div class="oc-item"><a href="#"><img src="demos/bike/images/clients/5.png" alt="clients"></a></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="section bg-transparent topmargin-lg mb-0">
-					<div class="container">
-						<div class="heading-block mx-auto center" style="max-width: 600px">
-							<small class="text-black-50 text-uppercase ls3 fw-semibold">Our Service</small>
-							<h2 class="text-capitalize fw-semibold ls0 mb-1" style="font-size: 36px">How do you Get Bike</h2>
-							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-						</div>
 						<div class="clear"></div>
-						<div class="row showcase-section align-items-center justify-content-between clearfix">
-							<div class="col-lg-3 col-md-5">
-								<ul class="mb-0">
-									<li class="showcase-feature showcase-feature-active" data-target="#target-1">
-										<h3>Choose Your Location.</h3>
-	  									<p>Credibly conceptualize backward-compatible interna visionary.</p>
-									</li>
-									<li class="showcase-feature" data-target="#target-2">
-										<h3>Choose Your Bike.</h3>
-	  									<p>Assertively engineer standardized interactive meta-services.</p>
-									</li>
-									<li class="showcase-feature" data-target="#target-3">
-										<h3>Get Confirmation Email.</h3>
-	  									<p>Holisticly customize fully synergistic e-business continually.</p>
-									</li>
-									<li class="showcase-feature" data-target="#target-4">
-										<h3 class="text-uppercase">Start Riding.</h3>
-	  									<p>Interactively without backward-compatible enable.</p>
-									</li>
-								</ul>
+
+						<div class="row topmargin-lg mx-auto" style="max-width: 1000px;">
+
+							<div class="col-md-4 mb-5">
+
+								<div class="team">
+									<div class="team-image">
+										<img src="one-page/images/team/1.jpg" alt="John Doe">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
+												<a href="#" class="social-icon si-borderless si-small si-facebook" title="Facebook">
+													<i class="icon-facebook"></i>
+													<i class="icon-facebook"></i>
+												</a>
+												<a href="#" class="social-icon si-borderless si-small si-twitter" title="Twitter">
+													<i class="icon-twitter"></i>
+													<i class="icon-twitter"></i>
+												</a>
+												<a href="#" class="social-icon si-borderless si-small si-github" title="Github">
+													<i class="icon-github"></i>
+													<i class="icon-github"></i>
+												</a>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-speed="400"></div>
+										</div>
+									</div>
+									<div class="team-desc team-desc-bg">
+										<div class="team-title"><h4>John Doe</h4><span>CEO</span></div>
+									</div>
+								</div>
+
 							</div>
 
-							<div class="col-lg-8 col-md-7">
-								<div id="target-1" class="showcase-target showcase-target-active">
-									<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8401081858365!2d144.95373095091972!3d-37.81721397965242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1526558559407" data-lightbox="iframe">
-										<img src="demos/bike/images/mockups/1.jpg" alt="Image">
-									</a>
-								</div>
-								<div id="target-2" class="showcase-target">
-									<img class="rounded" src="demos/bike/images/mockups/2.jpg" alt="Image">
-								</div>
-								<div id="target-3" class="showcase-target">
-									<img class="rounded" src="demos/bike/images/mockups/3.jpg" alt="Image">
-								</div>
-								<div id="target-4" class="showcase-target">
-									<div class="rounded" style="background: url('demos/bike/images/mockups/4.jpg') bottom center no-repeat; background-size: cover; min-height: 500px;">
-										<div class="row dark m-0">
-											<div class="col-lg-5 rounded py-5 px-4" style="background-color: rgba(0,0,0,0.5);">
-												<h2 class="display-5 mb-0">Ride Away.</h2>
-												<hr>
-												<p class="lead d-none d-md-block mb-0">In Style. With Confidence. Eco-Friendly Way.</p>
+							<div class="col-md-4 mb-5">
+
+								<div class="team">
+									<div class="team-image">
+										<img src="one-page/images/team/2.jpg" alt="Josh Clark">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
+												<a href="#" class="social-icon si-borderless si-small si-twitter" title="Twitter">
+													<i class="icon-twitter"></i>
+													<i class="icon-twitter"></i>
+												</a>
+												<a href="#" class="social-icon si-borderless si-small si-linkedin" title="LinkedIn">
+													<i class="icon-linkedin"></i>
+													<i class="icon-linkedin"></i>
+												</a>
+												<a href="#" class="social-icon si-borderless si-small si-flickr" title="Flickr">
+													<i class="icon-flickr"></i>
+													<i class="icon-flickr"></i>
+												</a>
 											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-speed="400"></div>
+										</div>
+									</div>
+									<div class="team-desc team-desc-bg">
+										<div class="team-title"><h4>Mary Jane</h4><span>Co-Founder</span></div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-md-4 mb-5">
+
+								<div class="team">
+									<div class="team-image">
+										<img src="one-page/images/team/3.jpg" alt="Mary Jane">
+										<div class="bg-overlay">
+											<div class="bg-overlay-content align-items-end" data-hover-animate="fadeIn" data-hover-speed="400">
+												<a href="#" class="social-icon si-borderless si-small si-twitter" title="Twitter">
+													<i class="icon-twitter"></i>
+													<i class="icon-twitter"></i>
+												</a>
+												<a href="#" class="social-icon si-borderless si-small si-vimeo" title="Vimeo">
+													<i class="icon-vimeo"></i>
+													<i class="icon-vimeo"></i>
+												</a>
+												<a href="#" class="social-icon si-borderless si-small si-instagram" title="Instagram">
+													<i class="icon-instagram"></i>
+													<i class="icon-instagram"></i>
+												</a>
+											</div>
+											<div class="bg-overlay-bg" data-hover-animate="fadeIn" data-hover-speed="400"></div>
+										</div>
+									</div>
+									<div class="team-desc team-desc-bg">
+										<div class="team-title"><h4>Josh Clark</h4><span>Sales</span></div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="section-works" class="page-section pt-0">
+
+					<div class="section m-0">
+						<div class="container clearfix">
+							<div class="mx-auto center" style="max-width: 900px;">
+								<h2 class="mb-0 fw-light ls1">We create &amp; craft projects that ooze creativity in every aspect. We try to create a benchmark in everything we do. Take a moment to browse through some of our recent completed work.</h2>
+							</div>
+						</div>
+					</div>
+
+					<!-- Portfolio Items
+					============================================= -->
+					<div class="portfolio grid-container row g-0">
+
+						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/1.jpg" alt="Open Imagination">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+												<h3><a href="#">Open Imagination</a></h3>
+												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/2.jpg" alt="Locked Steel Gate">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+												<h3><a href="#">Locked Steel Gate</a></h3>
+												<span><a href="#">Illustrations</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/3.jpg" alt="Mac Sunglasses">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+												<h3><a href="#">Mac Sunglasses</a></h3>
+												<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/4.jpg" alt="Open Imagination">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+												<h3><a href="#">Open Imagination</a></h3>
+												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="portfolio-item col-lg-6 col-md-4 col-sm-6 col-12 wide">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/5.jpg" alt="Console Activity">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+												<h3><a href="#">Console Activity</a></h3>
+												<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/6.jpg" alt="Open Imagination">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutUpSmall" data-hover-speed="350">
+												<h3><a href="#">Open Imagination</a></h3>
+												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-12">
+							<div class="grid-inner">
+								<div class="portfolio-image">
+									<a href="#">
+										<img src="one-page/images/portfolio/mixed/7.jpg" alt="Backpack Contents">
+									</a>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content flex-column" data-hover-animate="fadeIn">
+											<div class="portfolio-desc p-0 center" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeOutDownSmall" data-hover-speed="350">
+												<h3><a href="#">Backpack Contents</a></h3>
+												<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
+											</div>
+										</div>
+										<div class="bg-overlay-bg" data-hover-animate="fadeIn"></div>
+									</div>
+								</div>
+							</div>
+						</article>
+
+					</div><!-- #portfolio end -->
+
+					<div class="topmargin center"><a href="#" class="button button-border button-circle fw-semibold">View More Projects</a></div>
+
+				</div>
+
+				<div id="section-services" class="page-section pt-0">
+
+					<div class="section m-0">
+						<div class="container clearfix">
+							<div class="mx-auto center" style="max-width: 900px;">
+								<h2 class="mb-0 fw-light ls1">We enjoy working on the Services &amp; Products we provide as much as you need them. This help us in delivering your Goals easily. Browse through the wide range of services we provide.</h2>
+							</div>
+						</div>
+					</div>
+
+					<div class="row align-items-stretch">
+
+						<div class="col-lg-4 d-none d-md-block" style="background: url('images/services/main-bg.jpg') center center no-repeat; background-size: cover;"></div>
+						<div class="col-lg-8">
+							<div class="row align-items-stretch grid-border clearfix">
+								<div class="col-lg-4 col-md-6 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-et-mobile color"></i></a>
+										</div>
+										<div class="fbox-content fbox-content-sm">
+											<h3>Responsive Framework</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-et-presentation color"></i></a>
+										</div>
+										<div class="fbox-content fbox-content-sm">
+											<h3>Beautifully Presented</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-et-puzzle color"></i></a>
+										</div>
+										<div class="fbox-content fbox-content-sm">
+											<h3>Extensively Extendable</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-et-gears color"></i></a>
+										</div>
+										<div class="fbox-content fbox-content-sm">
+											<h3>Powerfully Customizable</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-et-genius color"></i></a>
+										</div>
+										<div class="fbox-content fbox-content-sm">
+											<h3>Geniusly Transformable</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-padding">
+									<div class="feature-box fbox-center fbox-dark fbox-plain">
+										<div class="fbox-icon">
+											<a href="#"><i class="icon-et-hotairballoon color"></i></a>
+										</div>
+										<div class="fbox-content fbox-content-sm">
+											<h3>Industrial Support</h3>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+
 					</div>
-				</div>
 
-				<div class="section bg1 mt-4" style="padding: 120px 0;">
-					<div class="container">
-						<div class="heading-block mx-auto center" style="max-width: 600px">
-							<small class="text-black-50 text-uppercase ls3 fw-semibold">Available Bikes</small>
-							<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Check Out Our Bikes</h2>
-							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-						</div>
-						<div class="row justify-content-between">
-							<div class="col-lg-6">
-								<div class="media row">
-								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/1.png" alt="Generic placeholder image" width="230">
-								  <div class="col-sm-7 media-body">
-								  	<h3 class="mb-3">Trek Bike</h3>
-								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
-								  </div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 mt-5 mt-lg-0">
-								<div class="media row">
-								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/2.png" alt="Generic placeholder image" width="230">
-								  <div class="col-sm-7 media-body">
-								    <h3 class="mb-3">Islabikes Luath Pro Series</h3>
-								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
-								  </div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 mt-5">
-								<div class="media row">
-								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/3.png" alt="Generic placeholder image" width="230">
-								  <div class="col-sm-7 media-body">
-								    <h3 class="mb-3">Syracuse Bicycle</h3>
-								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
-								  </div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 mt-5">
-								<div class="media row">
-								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="demos/bike/images/bikes/4.png" alt="Generic placeholder image" width="230">
-								  <div class="col-sm-7 media-body">
-								    <h3 class="mb-3">Wi-Bike Range</h3>
-								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
-								    <a href="#" class="button button-shadow button-rounded fw-normal ls0 m-0 nott">View More</a>
-								  </div>
-								</div>
-							</div>
+					<div class="section dark m-0">
+						<div class="mx-auto center" style="max-width: 900px;">
+							<h2 class="mb-0 fw-light ls1">Like Our Services? Get an <a href="#" data-scrollto="#template-contactform" data-offset="140" data-easing="easeInOutExpo" data-speed="1250" class="button button-border button-circle button-light button-large my-0" style="position: relative; top: -3px;">Instant Quote</a></h2>
 						</div>
 					</div>
-				</div>
 
-				<div class="section bg-transparent" style="padding: 80px 0">
-					<div class="container">
-						<div class="heading-block mx-auto border-bottom-0 center" style="max-width: 600px">
-							<i class="icon-et-bike d-block h1 mb-4 text-black"></i>
-							<small class="text-black-50 text-uppercase ls3 fw-semibold">What We Have Done</small>
-							<h2 class="nott fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px"><span class="counter counter-inherit text-dark inline-block">More than <code class="color"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></code>+</span> Bikes are already Rented in <span>11</span> Countries.</h2>
-							<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-						</div>
-						<ul class="skills mx-auto" style="max-width: 600px">
-							<li data-percent="80">
-								<div class="progress">
-									<div class="progress-percent"><div class="counter counter-inherit counter-instant"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></div></div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
+					<div class="section parallax m-0 dark" style="background-image: url('one-page/images/page/testimonials.jpg'); padding: 150px 0;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
 
-				<div id="section-price" class="section" style="background: url('demos/bike/images/bg.png') repeat-y center top; padding: 100px 0;">
-					<div class="container">
-						<div class="row justify-content-between">
-							<div class="col-md-7">
-								<div class="heading-block border-bottom-0">
-									<small class="text-black-50 text-uppercase ls3 fw-semibold">Pricing Table</small>
-									<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Bike Rental Prices</h2>
-									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate vero esse ea hic quod veniam quam accusamus laboriosam ipsam provident voluptatibus iste earum facilis voluptatum, ducimus quis quae blanditiis temporibus minima libero! Doloribus sapiente voluptatibus cupiditate autem debitis id.</p>
-								</div>
-								<div class="row">
-									<div class="col-6">
-										<!-- Bikes Slider -->
-										<input class="range-slider-bikes" />
-										<label class="mt-2" for="">Select Number of Bikes</label>
-									</div>
-									<div class="col-6">
-										<!-- Days Slider -->
-										<input class="range-slider-days" />
-										<label class="mt-2" for="">Select Number of Days</label>
-									</div>
-								</div>
-								<div class="row mt-4 mt-md-5 clearfix">
-									<div class="col-sm-6">
-										<h4 class="fw-semibold mb-3">Free Plan:</h4>
-										<ul class="ms-3 mb-2">
-											<li class="mb-2">1Hr Free Trail.</li>
-											<li class="mb-2">Used Bikes.</li>
-											<li class="mb-2">No Electric Bikes.</li>
-											<li class="mb-2">Money Back Guarantee.</li>
-										</ul>
-									</div>
-									<div class="col-sm-6 mt-4 mt-sm-0">
-										<h4 class="fw-semibold mb-3">Pro Plans:</h4>
-										<ul class="ms-3 mb-2">
-											<li class="mb-2">Door - Door Service.</li>
-											<li class="mb-2">Choose any Bike.</li>
-											<li class="mb-2">Electric Bikes Included.</li>
-											<li class="mb-2">Monthly Discounts Available.</li>
-											<li class="mb-2">Money Back Guarantee.</li>
-										</ul>
+						<div class="container clearfix">
+
+							<div class="row justify-content-end">
+								<div class="col-md-7">
+									<div class="fslider testimonial testimonial-full bg-transparent border-0 shadow-none p-0" data-arrows="false">
+										<div class="flexslider">
+											<div class="slider-wrap">
+												<div class="slide">
+													<div class="testi-content">
+														<p>Similique fugit repellendus expedita excepturi iure perferendis provident quia eaque vero numquam?</p>
+														<div class="testi-meta">
+															Steve Jobs
+															<span>Apple Inc.</span>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="testi-content">
+														<p>Natus voluptatum enim quod necessitatibus quis expedita harum provident eos obcaecati id culpa corporis molestias.</p>
+														<div class="testi-meta">
+															Collis Ta'eed
+															<span>Envato Inc.</span>
+														</div>
+													</div>
+												</div>
+												<div class="slide">
+													<div class="testi-content">
+														<p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum!</p>
+														<div class="testi-meta">
+															John Doe
+															<span>XYZ Inc.</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-5 mt-4 mt-md-0 sticky-sidebar-wrap">
-								<div class="card text-center border-0 shadow sticky-sidebar py-4">
-									<div class="card-body py-4">
-										<h3 class="card-title fw-normal mb-0">Your Plan</h3>
-										<!-- Price Value -->
-										<div class="pricing-price fw-bold py-3"></div>
-										<p class="card-text pricing-sub text-muted">$2/Days Per Bikes</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="section-blog" class="page-section">
+
+					<h2 class="text-center text-uppercase fw-light ls3 font-body">Recently From the Blog</h2>
+
+					<div class="section mb-0">
+						<div class="container clearfix">
+
+							<div class="row posts-md mt-5 col-mb-50 mb-0">
+
+								<div class="entry col-md-6">
+									<div class="grid-inner row align-items-center">
+										<div class="col-lg-6">
+											<div class="entry-image">
+												<a href="#"><img src="one-page/images/blog/1.jpg" alt="Paris"></a>
+											</div>
+										</div>
+										<div class="col-lg-6 mt-3 mt-lg-0">
+											<span class="before-heading fst-normal">Press &amp; Media</span>
+											<div class="entry-title nott">
+												<h3 class="fw-normal"><a href="#">Global Meetup Program is Launching!</a></h3>
+											</div>
+											<div class="entry-content">
+												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+											</div>
+										</div>
 									</div>
-									<div class="line my-1"></div>
-									<div class="card-body py-4">
-										<ul class="iconlist ms-0" style="opacity: .8">
-											<li class="mb-2">All New Bikes</li>
-											<li class="mb-2">Door - Door Service</li>
-											<li class="mb-2">Provide One Helmet/Bike</li>
-											<li>Credit Cards Accepted</li>
-										</ul>
-										<a href="#" class="button button-rounded button-large ls0 fw-normal ms-0 mb-2 nott">Rent Now</a>
+								</div>
+
+								<div class="entry col-md-6">
+									<div class="grid-inner row align-items-center">
+										<div class="col-lg-6">
+											<div class="entry-image">
+												<a href="#"><img src="one-page/images/blog/2.jpg" alt="Paris"></a>
+											</div>
+										</div>
+										<div class="col-lg-6 mt-3 mt-lg-0">
+											<span class="before-heading fst-normal">Inside Scoops</span>
+											<div class="entry-title nott">
+												<h3 class="fw-normal"><a href="#">The New YouTube Economy unfolds itself</a></h3>
+											</div>
+											<div class="entry-content">
+												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+											</div>
+										</div>
 									</div>
+								</div>
+
+								<div class="entry col-md-6">
+									<div class="grid-inner row align-items-center">
+										<div class="col-lg-6">
+											<div class="entry-image">
+												<a href="#"><img src="one-page/images/blog/3.jpg" alt="Paris"></a>
+											</div>
+										</div>
+										<div class="col-lg-6 mt-3 mt-lg-0">
+											<span class="before-heading fst-normal">Video Blog</span>
+											<div class="entry-title nott">
+												<h3 class="fw-normal"><a href="#">Kicking Off Design Party in Style</a></h3>
+											</div>
+											<div class="entry-content">
+												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="entry col-md-6">
+									<div class="grid-inner row align-items-center">
+										<div class="col-lg-6">
+											<div class="entry-image">
+												<a href="#"><img src="one-page/images/blog/4.jpg" alt="Paris"></a>
+											</div>
+										</div>
+										<div class="col-lg-6 mt-3 mt-lg-0">
+											<span class="before-heading fst-normal">Inspiration</span>
+											<div class="entry-title nott">
+												<h3 class="fw-normal"><a href="#">Top Ten Signs You're a Designer</a></h3>
+											</div>
+											<div class="entry-content">
+												<a href="#" class="more-link">Read more <i class="icon-angle-right"></i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="container topmargin-lg clearfix">
+
+						<div id="oc-clients" class="owl-carousel topmargin image-carousel carousel-widget" data-margin="80" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
+
+							<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/3.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/4.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/5.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/6.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></div>
+							<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div id="section-contact" class="page-section pt-0">
+
+					<div class="row mx-0 bottommargin-lg align-items-stretch">
+						<div class="col-lg-8 col-md-6 d-none d-md-block px-0">
+							<div class="gmap h-100" data-address="Melbourne, Australia" data-maptype="ROADMAP" data-zoom="14" data-markers='[{ address: "Melbourne, Australia", html: "Melbourne, Australia", icon:{ image: "one-page/images/icons/map-icon-red.png", iconsize: [32, 32], iconanchor: [14,44] } }]' data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.country","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"30"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"simplified"},{"gamma":"0.00"},{"lightness":"74"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"lightness":"3"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]'></div>
+						</div>
+						<div class="col-lg-4 col-md-6" style="background-color: #F5F5F5;">
+							<div class="col-padding">
+								<h3 class="font-body fw-normal ls1">Our Headquarters</h3>
+
+								<div style="font-size: 16px; line-height: 1.7;">
+									<address style="line-height: 1.7;">
+										<strong>North America:</strong><br>
+										795 Folsom Ave, Suite 600<br>
+										San Francisco, CA 94107<br>
+									</address>
+
+									<div class="clear topmargin-sm"></div>
+
+									<address style="line-height: 1.7;">
+										<strong>Europe:</strong><br>
+										795 Folsom Ave, Suite 600<br>
+										San Francisco, CA 94107<br>
+									</address>
+
+									<div class="clear topmargin"></div>
+
+									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+									<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="section bg-transparent clearfix">
 					<div class="container clearfix">
 
-						<div class="heading-block mx-auto border-bottom-0 center clearfix" style="max-width: 600px">
-							<small class="text-black-50 text-uppercase ls3 fw-semibold">Accessories</small>
-							<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Looking for more Addons?</h2>
-							<p class="mb-3">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-							<div class="center"><div class="button ls0 button-rounded button-border nott fw-normal ">View More</div></div>
-						</div>
+						<div class="mx-auto topmargin" style="max-width: 850px;">
 
-						<div class="row clearfix">
+							<div class="form-widget">
 
-							<div class="col-lg-3 col-sm-6">
-								<a href="#" class="portfolio-item border d-block bg1">
-									<div class="portfolio-image">
-										<img src="demos/bike/images/items/1.png" alt="Image">
+								<div class="form-result"></div>
+
+								<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+									<div class="form-process">
+										<div class="css3-spinner">
+											<div class="css3-spinner-scale-ripple">
+												<div></div>
+												<div></div>
+												<div></div>
+											</div>
+										</div>
 									</div>
-									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
-										<h3 class="mb-0 text-dark">Bike Helmet</h3>
-										<h6 class="text-dark">&dollar; 5.99/Day</h6>
+
+									<div class="col-md-6 mb-4">
+										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Name" />
 									</div>
-								</a>
+									<div class="col-md-6 mb-4">
+										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email Address" />
+									</div>
+
+									<div class="w-100"></div>
+
+									<div class="col-md-4 mb-4">
+										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control" placeholder="Phone" />
+									</div>
+
+									<div class="col-md-8 mb-4">
+										<input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
+									</div>
+
+									<div class="w-100"></div>
+
+									<div class="col-12 mb-4">
+										<textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
+									</div>
+
+									<div class="col-12 center mb-4">
+										<button class="button button-border button-circle fw-medium ms-0 topmargin-sm" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+										<br>
+										<small style="display: block; font-size: 13px; margin-top: 15px;">We'll do our best to get back to you within 6-8 working hours.</small>
+									</div>
+
+									<div class="w-100"></div>
+
+									<div class="col-12 d-none">
+										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+									</div>
+
+									<input type="hidden" name="prefix" value="template-contactform-">
+
+								</form>
+
 							</div>
 
-							<div class="col-lg-3 col-sm-6 mt-4 mt-sm-0">
-								<a href="#" class="portfolio-item border d-block">
-									<div class="portfolio-image">
-										<img src="demos/bike/images/items/2.png" alt="Image">
-									</div>
-									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
-										<h3 class="mb-0 text-dark">Leather Gloves</h3>
-										<h6 class="text-dark">&dollar; 2.19/Day</h6>
-									</div>
-								</a>
-							</div>
-
-							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
-								<a href="#" class="portfolio-item border d-block bg1">
-									<div class="portfolio-image">
-										<img src="demos/bike/images/items/3.png" alt="Image">
-									</div>
-									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
-										<h3 class="mb-0 text-dark">Water Bottles</h3>
-										<h6 class="text-dark">&dollar; 3.99/Day</h6>
-									</div>
-								</a>
-							</div>
-
-							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
-								<a href="#" class="portfolio-item border d-block">
-									<div class="portfolio-image">
-										<img src="demos/bike/images/items/4.png" alt="Image">
-									</div>
-									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
-										<h3 class="mb-0 text-dark">Bottle Holder</h3>
-										<h6 class="text-dark">&dollar; 1.99/Day</h6>
-									</div>
-								</a>
-							</div>
 						</div>
 
 					</div>
+
 				</div>
 
-				<div class="section bg-transparent clearfix">
-					<div class="container">
-						<div class="row align-items-center justify-content-between">
-							<div class="col-lg-6">
-								<div class="heading-block border-bottom-0 mb-0">
-									<small class="text-black-50 text-uppercase ls3 fw-semibold">Contact Us</small>
-									<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 44px; letter-spacing: -1px">Still Can't Decide?!</h2>
-									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
-								</div>
-							</div>
-
-							<div class="col-lg-6 d-inline-block d-sm-inline-flex justify-content-start justify-content-lg-end">
-								<div class="button button-xlarge ls0 button-rounded button-border nott fw-normal ">Start Renting</div>
-								<div class="button button-xlarge ls0 button-rounded button-shadow nott fw-normal ">Contact Us</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section><!-- #content end -->
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark">
-			<div class="container">
+		<footer id="footer" class="dark border-0">
 
-				<!-- Footer Widgets
-				============================================= -->
+			<div class="container center">
 				<div class="footer-widgets-wrap">
 
-					<div class="row">
-						<div class="col-6 col-lg-4">
-							<img class="mb-2" src="demos/bike/images/logo-foo.png" alt="Image" width="123">
-							<small class="d-block mb-4 text-muted">&copy; 2020-2021</small>
-							<div class="row my-4">
-								<div class="col-md-6">
-									<div class="counter counter-small text-light fw-normal"><span class="h4" data-from="50" data-to="8465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-									<h5 class="m-0 text-muted">Total Rented</h5>
+					<div class="row mx-auto clearfix">
+
+						<div class="col-lg-4">
+
+							<div class="widget clearfix">
+								<h4>Site Links</h4>
+
+								<ul class="list-unstyled footer-site-links mb-0">
+									<li><a href="#" data-scrollto="#wrapper" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Top</a></li>
+									<li><a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">About</a></li>
+									<li><a href="#" data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Works</a></li>
+									<li><a href="#" data-scrollto="#section-services" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Services</a></li>
+									<li><a href="#" data-scrollto="#section-blog" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Blog</a></li>
+									<li><a href="#" data-scrollto="#section-contact" data-easing="easeInOutExpo" data-speed="1250" data-offset="70">Contact</a></li>
+								</ul>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="widget subscribe-widget clearfix" data-loader="button">
+								<h4>Subscribe</h4>
+
+								<div class="widget-subscribe-form-result"></div>
+								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control form-control-lg not-dark required email" placeholder="Your Email Address">
+									<button class="button button-border button-circle button-light topmargin-sm" type="submit">Subscribe Now</button>
+								</form>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="widget clearfix">
+								<h4>Contact</h4>
+
+								<p class="lead">795 Folsom Ave, Suite 600<br>San Francisco, CA 94107</p>
+
+								<div class="center topmargin-sm">
+									<a href="#" class="social-icon inline-block border-0 si-small si-facebook" title="Facebook">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a href="#" class="social-icon inline-block border-0 si-small si-twitter" title="Twitter">
+										<i class="icon-twitter"></i>
+										<i class="icon-twitter"></i>
+									</a>
+									<a href="#" class="social-icon inline-block border-0 si-small si-github" title="Github">
+										<i class="icon-github"></i>
+										<i class="icon-github"></i>
+									</a>
+									<a href="#" class="social-icon inline-block border-0 si-small si-pinterest" title="Pinterest">
+										<i class="icon-pinterest"></i>
+										<i class="icon-pinterest"></i>
+									</a>
 								</div>
-
-								<div class="col-md-6">
-									<div class="counter counter-small text-light fw-normal"><span class="h4" data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-									<h5 class="m-0 text-muted">Clients Served</h5>
-								</div>
 							</div>
-							<div class="clear"></div>
-							<div>
-								<a href="#" class="social-icon me-2 si-colored si-rounded si-small si-facebook">
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
-								</a>
-								<a href="#" class="social-icon me-2 si-colored si-rounded si-small si-twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
-								<a href="#" class="social-icon me-2 si-colored si-rounded si-small si-youtube">
-									<i class="icon-youtube"></i>
-									<i class="icon-youtube"></i>
-								</a>
-								<a href="#" class="social-icon si-colored si-rounded si-small si-appstore">
-									<i class="icon-apple"></i>
-									<i class="icon-apple"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-6 col-lg-3">
-							<h4>Features</h4>
-							<ul class="list-unstyled mb-0 text-small">
-								<li class="mb-2"><a class="text-muted" href="#">Cool stuff</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Random feature</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Team feature</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Stuff for developers</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Another one</a></li>
-								<li><a class="text-muted" href="#">Last time</a></li>
-							</ul>
-						</div>
-						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
-							<h4>Resources</h4>
-							<ul class="list-unstyled mb-0 text-small">
-								<li class="mb-2"><a class="text-muted" href="#">Resource</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Resource name</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Another resource</a></li>
-								<li><a class="text-muted" href="#">Final resource</a></li>
-							</ul>
-						</div>
-						<div class="col-6 col-lg-2 mt-5 mt-lg-0">
-							<h4>About</h4>
-							<ul class="list-unstyled mb-0 text-small">
-								<li class="mb-2"><a class="text-muted" href="#">Team</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Locations</a></li>
-								<li class="mb-2"><a class="text-muted" href="#">Privacy</a></li>
-								<li><a class="text-muted" href="#">Terms</a></li>
-							</ul>
-						</div>
-					</div>
 
-				</div><!-- .footer-widgets-wrap end -->
-
-			</div>
-			<!-- Copyrights
-			============================================= -->
-			<div id="copyrights">
-
-				<div class="container clearfix">
-
-					<div class="row align-items-center justify-content-between">
-						<div class="col-md-6">
-							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
-							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 						</div>
 
-						<div class="col-md-6 d-flex justify-content-md-end mt-4 mt-md-0">
-							<div class="copyrights-menu copyright-links mb-0 clearfix">
-								<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Price</a>/<a href="#">Contact</a>
-							</div>
-						</div>
 					</div>
 
 				</div>
+			</div>
 
-			</div><!-- #copyrights end -->
+			<div id="copyrights">
+				<div class="container center clearfix">
+					Copyrights Canvas 2020 | All Rights Reserved
+				</div>
+			</div>
 
 		</footer><!-- #footer end -->
 
@@ -586,96 +1008,11 @@
 	============================================= -->
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
-
-	<script src="js/components/rangeslider.min.js"></script>
+	<script src="https://maps.google.com/maps/api/js?key=YOUR-API-KEY"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
-
-	<script>
-		$('#ytb-video').on('click', function(e){
-			e.preventDefault();
-
-			if( $(this).hasClass('video-played') ) {
-				$('#ytb-video').YTPPause();
-			} else {
-				$('#ytb-video').YTPPlay();
-				$('.ytb-poster').stop(true,true).fadeTo( "slow", 0 );
-			}
-
-			$(this).toggleClass('video-played');
-		});
-
-
-		function showcaseSection( element ){
-
-			var otherElements = element.parents('.showcase-section').find('.showcase-feature'),
-				elementTarget = jQuery( element.attr('data-target') ),
-				otherTargets = element.parents('.showcase-section').find('.showcase-target');
-
-			otherElements.removeClass('showcase-feature-active');
-			element.addClass('showcase-feature-active');
-			otherTargets.removeClass('showcase-target-active');
-			elementTarget.addClass('showcase-target-active');
-
-		}
-
-		jQuery('.showcase-feature').hover( function(){
-			showcaseSection( jQuery(this) );
-		});
-
-		$(document).ready( function() {
-
-			var pricingBikes = 1,
-				days = 1,
-				elementbikes = $(".range-slider-bikes"),
-				elementDays = $(".range-slider-days");
-
-			elementbikes.ionRangeSlider({
-				grid: false,
-				step: 1,
-				min: 1,
-				from:1,
-				max: 5,
-				postfix: ' Bike(s)',
-				onStart: function(data){
-					pricingBikes = data.from;
-				}
-			});
-
-			elementbikes.on( 'change', function(){
-				pricingBikes = $(this).prop('value');
-				calculatePrice( pricingBikes, days );
-			});
-
-			elementDays.ionRangeSlider({
-				grid: false,
-				step: 1,
-				min: 1,
-				from: 4,
-				max: 30,
-				postfix: ' Days',
-				onStart: function(data){
-					days = data.from;
-					console.log(data);
-				}
-			});
-
-			elementDays.on( 'onStart change', function(){
-				days = $(this).prop('value');
-				calculatePrice( pricingBikes, days );
-			});
-
-			calculatePrice( pricingBikes, days );
-
-			function calculatePrice( bikes, days ) {
-				var pricingValue = ( Number(bikes) * 1 ) * ( Number(days) * 2 );
-				jQuery('.pricing-price').html( '$'+pricingValue );
-			}
-
-		});
-	</script>
 
 </body>
 </html>
